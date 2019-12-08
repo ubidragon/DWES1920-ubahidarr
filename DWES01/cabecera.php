@@ -12,6 +12,6 @@
         <li class="navbarChild"><a href="index.php?typeform=preloadIrreal">Formulario precargado<br/>correcto e irreal</a></li>
         <li class="navbarChild"><a href="index.php?typeform=preloadBroken">Formulario precargado<br/>erróneo 1</a></li>
         <li class="navbarChild"><a href="index.php?typeform=preloadBroken2">Formulario precargado<br/>erróneo 2</a></li>
-        <li class="navbarChild"><a href="">Autoevaluación precargada<br/>y muestra de las capturas<br/>de la parte I</a></li>
+        <li class="navbarChild"><a href="autoevaluacion.php">Autoevaluación precargada<br/>y muestra de las capturas<br/>de la parte I</a></li>
     </ul>
 
