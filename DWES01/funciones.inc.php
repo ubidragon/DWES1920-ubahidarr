@@ -6,7 +6,7 @@ date_default_timezone_set('UTC');
 function paramsPreload($typeform)
 {
     if (!isset($_GET['typeform'])) {
-        $params = array("name" => $_GET['name']);
+        $params = array("name" => $_GET['name'], "surname" => $_GET['surname'], "sexo" => $_GET['sexo'], "date" => $_GET['date'], "place" => $_GET['place'], "email" => $_GET['email'], "phone" => $_GET['phone'], "url" => $_GET['url'], "html" => $_GET['html'], "mySQL" => $_GET['mySQL'], "ingles" => $_GET['ingles'], "php" => $_GET['php'], "javascript" => $_GET['javascript'], "LMSGI" => isset($_GET['LMSGI']) ? "checked" : "", "FOL" => isset($_GET['FOL']) ? "checked" : "", "PROG" => isset($_GET['PROG']) ? "checked" : "", "BBDD" => isset($_GET['BBDD']) ? "checked" : "", "SSII" => isset($_GET['SSII']) ? "checked" : "", "ED" => isset($_GET['ED']) ? "checked" : "", "DWEC" => isset($_GET['DWEC']) ? "checked" : "", "DWES" => isset($_GET['DWES']) ? "checked" : "", "DAW" => isset($_GET['DAW']) ? "checked" : "", "EIE" => isset($_GET['EIE']) ? "checked" : "", "FCT" => isset($_GET['FCT']) ? "checked" : "", "Proyecto" => isset($_GET['Proyecto']) ? "checked" : "", "DIW" => isset($_GET['DIW']) ? "checked" : "", "salarioActual" => $_GET['salarioActual'], "salarioDeseado" => $_GET['salarioDeseado']);
     } else if ($_GET['typeform'] == 'preload') {
         $params = array("name" => "Ubaldo", "surname" => "Hidalgo", "sexo" => "Hombre", "date" => "1994-06-20", "place" => "Sevilla", "email" => "ubidragon@protonmail.com", "phone" => "+34 666 33 66 55", "url" => "https://darebee.com/", "html" => "7", "mySQL" => "7", "ingles" => 5, "php" => "2", "javascript" => "8", "LMSGI" => "checked", "FOL" => "checked", "PROG" => "checked", "BBDD" => "checked", "SSII" => "checked", "ED" => "checked", "DWEC" => "checked", "DAW" => "checked", "EIE" => "checked", "DIW" => "checked", "salarioActual" => "15000,00", "salarioDeseado" => "20000,00");
     } else  if ($_GET['typeform'] == 'preloadIrreal') {
@@ -118,7 +118,8 @@ function unichr($u)
 
 function checkIsSalary($param)
 {
-    $patternSalary = "/^[0-9]*\,[0-9][0-9]" . unichr(8364) . "$/";
+    $patternSalary = "/^[0-9]*\,[0-9][0-9]$/";
+    //pattern con el sibolo del euro $patternSalary = "/^[0-9]*\,[0-9][0-9]" . unichr(8364) . "$/";
 
     return checkException(preg_match($patternSalary, htmlspecialchars($param)), "salary");
 }
@@ -336,7 +337,14 @@ function lineToLine($archivo, $table)
         $elementAlum = "itemAlum" . $itemNum;
         $elementProf = "itemProf" . $itemNum;
         $elementObs = "obs" . $itemNum;
-        $table .= "<tr><td>" . $item . "</td>";
+        $elementDescrip = "descrip" . $itemNum;
+
+        if ($_GET[$elementDescrip] === "menos" || !isset($_GET[$elementDescrip])) {
+            $table .= "<tr><td>" . verMas($item, 20) . "<br/><button name='".$elementDescrip."' value='mas'>VER MÁS</button></td>";
+        }else if($_GET[$elementDescrip] ==="mas"){
+            $table .= "<tr><td>" . verMas($item, strlen($item)) . "<br/><button name='".$elementDescrip."' value='menos'>VER MENOS</button></td>";
+        }
+        
         $table .= "<td style='text-align:center'>" . $notaMax . "</td>";
         if (isset($_GET[$elementAlum])) {
 
@@ -367,7 +375,7 @@ function lineToLine($archivo, $table)
 
             $notaProfesor += $_GET[$elementProf];
         } else {
-        
+
             if ($itemNum === "15") {
                 $table .= "<td><input type='number' name='itemProf" . $itemNum . "'value='" . $profesor . "' min='-10'  max='0' step='0.2' ></input></td>";
             } else {
@@ -402,4 +410,20 @@ function notasTotales($table, $notaAlumno, $notaProfesor)
     $table .= "<td><input type='number' name='profesorTotal' value='" . $profesor . "' min='0'  max='" . str_replace(",", ".", $notaMax) . "' step='0.05' ></input></td>";
     $table .= "<td style='background-color:grey;'></td></tr>";
     return $table;
+}
+
+
+function verMas($texto, $cantidad)
+{
+    $verMas="";
+    $separadorTexto =str_split($texto);
+    if (count($separadorTexto) > $cantidad) {
+        for ($i = 0; $i < $cantidad; $i++) {
+            $verMas .= htmlspecialchars($separadorTexto[$i]) . "";
+        }
+        $verMas .= " ...";
+    } else {
+        $verMas = $texto;
+    }
+    return $verMas;
 }

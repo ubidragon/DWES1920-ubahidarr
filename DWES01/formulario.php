@@ -100,10 +100,10 @@ $params = paramsPreload($_GET['typeform']);
         <legend>Conocimientos previos</legend>
         <div>
             <label for="salarioActual">Salario Actual:
-                <input type="text" name="salarioActual" id="salarioActual" pattern="^[0-9]*\,[0-9][0-9]$" placeholder="Salario Actual" value="<?php if (isset($params)) echo $params["salarioActual"]; ?>&euro;" required /></label>&nbsp;
+                <input type="text" name="salarioActual" id="salarioActual" pattern="^[0-9]*\,[0-9][0-9]$" placeholder="Salario Actual" value="<?php if (isset($params)) echo $params["salarioActual"]; ?>" required />&euro;</label>&nbsp;
             <?php if (isset($_GET["salarioActual"])) echo checkIsSalary($_GET["salarioActual"]); ?>
             <label for="salarioDeseado">Salario Deseado:
-                <input type="text" name="salarioDeseado" id="salarioDeseado" pattern="^[0-9]*\,[0-9][0-9]$" placeholder="Salario Deseado" value="<?php if (isset($params)) echo $params["salarioDeseado"]; ?>&euro;" required /></label>&nbsp;
+                <input type="text" name="salarioDeseado" id="salarioDeseado" pattern="^[0-9]*\,[0-9][0-9]$" placeholder="Salario Deseado" value="<?php if (isset($params)) echo $params["salarioDeseado"]; ?>" required />&euro;</label>&nbsp;
             <?php if (isset($_GET["salarioDeseado"])) echo checkIsSalary($_GET["salarioDeseado"]); ?>
     </fieldset>
     <br />

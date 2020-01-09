@@ -8,7 +8,7 @@ Conserva los datos introducidos tras error y permite modificarlos;0,5;0,5;0,5;
 Formato al dinero (€ con 2 decimales). Cálculo correcto de la edad. Correcta explicación de los módulos aprobados, etc.;0,5;0,5;0,5;
 Validación de datos según tipo;0,5;0,5;0,5;
 Placeholder y filtrado correcto;0,5;0,5;0,5;
-Autoevaluación.php. Cálculo correcto de notas de alumno y profesor.Presentación correcta de los ítems.Observaciones;2;1,75;2;
+Autoevaluación.php. Cálculo correcto de notas de alumno y profesor.Presentación correcta de los ítems.Observaciones;2;2;2;
 Estética y organización de la app;0,5;0,25;0,5;
 Estructuración del código (uso de funciones, inclusión de ficheros externos, documentación del código, variables intuitivas, optimización,…);0,5;0,25;0,5;El codigo seguramente podria haberlo hecho mucho mas optimo y realizar bastante codigo en diversas partes.
 Extra de creatividad y originalidad;0,5;0,3;0,5;La historia esta bien pero los colorines de la app y como se extructura es muy años 2000
