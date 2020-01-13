@@ -60,6 +60,29 @@ span.psw {
   }
 }
 
+.navbar {
+  list-style-type: none;
+ 
+  overflow: hidden;
+  background-color: #4CAF50;
+}
+
+.navbarChild {
+  float: left;
+}
+
+.navbarChild a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 0.5em;
+  text-decoration: none;
+}
+
+.navbarChild a:hover {
+  background-color: sandybrown;
+}
+
 
 .footer {
   position: fixed;
@@ -73,4 +96,18 @@ span.psw {
 
 .footer p {
 text-align: center;
+}
+
+.boton {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.boton:hover {
+  opacity: 0.8;
 }
