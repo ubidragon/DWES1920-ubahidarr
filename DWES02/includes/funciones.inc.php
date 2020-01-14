@@ -42,6 +42,16 @@ function ultimoCodMov($loginUsu){
     
 }
 
+function fechaLogin(){
+
+if (isset($_POST["fechaLogin"]) && !empty($_POST["fechaLogin"])) {
+	$fechaLogin=$_POST["fechaLogin"];
+}else{
+	$fechaLogin=date("d-m-Y H:i:s");
+}
+return $fechaLogin;
+}
+
 function salir(){
     unset($_POST["user"]);
 }
