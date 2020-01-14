@@ -3,8 +3,8 @@
  * Funcion para la persistencia del usuario entre las pantallas.
  */
 function reloadUser(){
-    if (isset($_POST["user"]) && !empty($_POST["user"])) {
-        return $user=$_POST["user"];
+    if (isset($_POST["userName"]) && !empty($_POST["userName"])) {
+        return $user=$_POST["userName"];
     }
 }
 /**
