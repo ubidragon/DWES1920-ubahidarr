@@ -4,12 +4,7 @@ setlocale (LC_TIME, "es_ES");
 require_once("funciones.inc.php");
 
 
-try {
-	$connection = new PDO('mysql:host=localhost;dbname=conta2', 'daw', 'daw');
-	$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-	$error = $e->getCode().": ".$e->getMessage();
-}
+
 
 ?>
 
@@ -18,28 +13,32 @@ try {
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>    
-	<?php if (isset($_POST["userName"]) && !empty($_POST["userName"])) { ?>
+<body> 
+<form class="formNotBorder">   
+	<?php if (isset($_POST["loginUser"]) && !empty($_POST["loginUser"])) { ?>
+		<input type="hidden" name="loginUser" value="<?php echo $_POST["loginUser"] ?>">
 		<ul class="navbar">
-			<li class="navbarChild"><a href="index.php">Menú de administracion</a></li>
-        	<li class="navbarChild"><a href="index.php">Nuevo usuario</a></li>
-        	<li class="navbarChild"><a href="index.php?typeform=preload">Modificar usuario</a></li>
-        	<li class="navbarChild"><a href="index.php?typeform=preloadIrreal">Borrar usuario</a></li>
-			<li class="navbarChild"><a href="index.php?typeform=preloadBroken">Cerrar sesión</a></li>
+			<li class="navbarChild"><button type="submit" formmethod="post" formaction="userMenu.php">Menu de usuario</button></li>
+			<li class="navbarChild"><button type="submit" formmethod="post" formaction="ultimosMovs.php">Ultimos movimientos</button></li>
+        	<li class="navbarChild"><button type="submit" formmethod="post" formaction="ingreso.php">Ingresos</button></li>
+        	<li class="navbarChild"><button type="submit" formmethod="post" formaction="gastos.php">Gastos</button></li>
+        	<li class="navbarChild"><button type="submit" formmethod="post" formaction="eliminarMov.php">Eliminar movimientos</button></li>
+			<li class="navbarChild"><a href="../">Cerrar sesión</a></li>		
 		</ul>
-		<p><i><?php echo $_POST["userName"]?></i></p>
+		<p><i>Usuario: <?php echo $_POST["loginUser"]?></i></p>
 	<?php }
-		else if (isset($_POST["admin"]) && !empty($_POST["admin"])) { 
+		else if ((isset($_POST["admin"]) && !empty($_POST["admin"])) || (isset($_GET["admin"]) && !empty($_GET["admin"])) ){ 				
 	?>
+	<input type="hidden" name="admin" value="<?php echo reloadAdmin(); ?>">
 		<ul class="navbar">
-			<li class="navbarChild"><a href="index.php">Menu de usuario</a></li>
-			<li class="navbarChild"><a href="index.php">Ultimos movimientos</a></li>
-        	<li class="navbarChild"><a href="index.php?typeform=preload">Ingresos</a></li>
-        	<li class="navbarChild"><a href="index.php?typeform=preloadIrreal">Gastos</a></li>
-        	<li class="navbarChild"><a href="index.php?typeform=preloadBroken">Eliminar movimientos</a></li>
-        	<li class="navbarChild"><a href="index.php?typeform=preloadBroken2">Cerrar sesión</a></li>
+			<li class="navbarChild"><button type="submit" formmethod="post" formaction="gestion.php">Menú de administracion</button></li>
+        	<li class="navbarChild"><button type="submit" formmethod="post" formaction="nuevoUsuario.php">Nuevo usuario</button></li>
+        	<li class="navbarChild"><button type="submit" formmethod="post" formaction="modificaUsuario.php">Modificar usuario</button></li>
+        	<li class="navbarChild"><button type="submit" formmethod="post" formaction="borraUsuario.php">Borrar usuario</button></li>
+			<li class="navbarChild"><button type="submit" formmethod="post" formaction="../">Cerrar sesión</button></li>
 		</ul>
-		<p><i><?php echo $_POST["admin"]?></i></p>
+		<p><i>Administrador: <?php echo reloadAdmin()?></i></p>
 <?php
 }
 ?>
+</form>

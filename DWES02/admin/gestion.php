@@ -2,16 +2,16 @@
 require_once("../includes/header.inc.php");
 ?>
 <link rel="stylesheet" href="../css/custom.css">
-<h2>Pantalla de Inicio</h2>
-<p><i>Nombre de Usuario - Fecha y hora de la conexion</i></p>
+<h2>Panel de administracion</h2>
 <form>
+<input type="hidden" name="admin" value="<?php echo reloadAdmin(); ?>">
   <div class="container">
-    <button type="submit" formaction="usuario.php">Nuevo usuario</button>
-    <button type="submit" formaction="invitado.php">Nuevo usuario<br/>precargado 1</button>     
-    <button type="submit" formaction="invitado.php">Nuevo usuario<br/>precargado 2</button>     
-    <button type="submit" formaction="usuario.php">Modificar usuario</button>
-    <button type="submit" formaction="usuario.php">Borrar usuario</button>
-    <button type="submit" formaction="usuario.php">Salir</button>
+    <button type="submit" formaction="nuevoUsuario.php">Nuevo usuario</button>
+    <button type="submit" formaction="nuevoUsuario.php">Nuevo usuario<br/>precargado 1</button>     
+    <button type="submit" formaction="nuevoUsuario.php">Nuevo usuario<br/>precargado 2</button>     
+    <button type="submit" formaction="modificaUsuario.php">Modificar usuario</button>
+    <button type="submit" formaction="borrausuario.php">Borrar usuario</button>
+    <button type="submit" formaction="../">Salir</button>
   </div>
 </form>
 <?php

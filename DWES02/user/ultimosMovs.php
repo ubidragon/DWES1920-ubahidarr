@@ -1,7 +1,5 @@
 <?php
 require_once("../includes/header.inc.php");
-$user=$_POST["user"];
-echo reloadUser();
 ?>
 <link rel="stylesheet" href="../css/custom.css">
 <h2>Ultimos Movimientos</h2>

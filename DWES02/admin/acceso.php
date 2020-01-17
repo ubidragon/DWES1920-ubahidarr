@@ -5,7 +5,7 @@ checkAdmin();
 <link rel="stylesheet" href="../css/custom.css">
 <h2>Pantalla de Inicio</h2>
 
-<form action="acceso.php" method="post">
+<form action="acceso.php" method="get">
   <div class="container">
     <label for="admin"><b>Usuario Administrador</b></label>
     <input type="text" placeholder="Introduzca usuario de administracion" name="admin" required>
