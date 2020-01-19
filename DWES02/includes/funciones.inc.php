@@ -55,24 +55,58 @@ function checkAdmin(){
 	} 
 }
 
-function nuevoIngreso(){
-    $codigo=ultimoCodMov( $_POST["loginUser"])+1;
-    $loginUser=$_POST["loginUser"];
-    $fecha=$_POST["fechaMov"];
-    $cantidad=$_POST["cantidad"];
-    $concepto= $_POST["concepto"];
-    nuevoMov($codigo, $loginUser, $fecha, $cantidad, $concepto);
-   // header("Location: ./ultimosMovs.php");
+/**
+ * Metodo para realizar las comprobaciones previas a insertar en bd
+ */
+function nuevoMovimiento($param){
+    $fecha;$cantidad;$concepto;
+
+    if ( isset($_POST['ingreso']) || isset($_POST['gastar']) ) {
+        if (isset($_POST["fechaMov"]) && !empty($_POST["fechaMov"])) {
+            $fecha=$_POST["fechaMov"];
+        }else{
+            $fecha=null;
+        }
+
+        if (isset($_POST["cantidad"]) && !empty($_POST["cantidad"])) {
+            $cantidad=$_POST["cantidad"];
+            if ($param == 'gastos') {
+                $cantidad*=-1;
+            }
+            
+        }else {
+            $cantidad=null;
+        }
+
+        if (isset($_POST["concepto"]) && !empty($_POST["concepto"])) {
+            $concepto=$_POST["concepto"];
+        }else{
+            $concepto=null;
+        }
+
+       if ((isset($_POST["fechaMov"]) && !empty($_POST["fechaMov"]))
+        && (isset($_POST["cantidad"]) && !empty($_POST["cantidad"]))
+        && (isset($_POST["concepto"]) && !empty($_POST["concepto"]))   
+        && checkParametrosMovimientos($fecha,$cantidad,$concepto)) {
+            
+            $codigo=ultimoCodMov( $_POST["loginUser"])+1;
+            $loginUser=$_POST["loginUser"];
+            nuevoMov($codigo, $loginUser, $fecha, $cantidad, $concepto);
+            $uri = ParentUri().'ultimosMovs.php';
+//            RedirectWithMethodPost($uri, $_POST);
+            header('Location: '.$uri.'?loginUser='.$_POST["loginUser"]);
+        }else{
+            echo "<div class='navbarError'>".checkParametrosMovimientos($fecha,$cantidad,$concepto)."</div>";
+        }
+
+    }
+
 }
 
-function nuevoGasto(){
-    $codigo=ultimoCodMov( $_POST["loginUser"])+1;
-    $loginUser=$_POST["loginUser"];
-    $fecha=$_POST["fechaMov"];
-    $cantidad=-$_POST["cantidad"];
-    $concepto= $_POST["concepto"];
-    nuevoMov($codigo, $loginUser, $fecha, $cantidad, $concepto);
-}
+
+/**
+ * Funcion para insertar nuevos movimientos en la base de datos
+ */
 
 function nuevoMov($codigo, $loginUser, $fecha, $cantidad, $concepto){
     $connection=conexionBBDD();
@@ -116,6 +150,93 @@ function ultimoCodMov($loginUsu){
 }
 
 
+function ultimosMovs(){
+
+    $connection=conexionBBDD();
+    $login = reloadUser();
+    $tabla ="";
+    
+    try {
+        $consulta = $connection->prepare("SELECT * FROM movimientos WHERE loginUsu=? ORDER BY `movimientos`.`fecha` DESC LIMIT 10");
+        $consulta->bindParam(1, $login);
+        $consulta->execute();
+        if ($consulta->fetch()) {
+            $tabla.='<table><tr><th>Fecha del movimiento</th><th>Concepto</th><th>Cantidad</th></tr>';
+       
+        while ($movimiento = $consulta->fetch()){
+        $tabla.= '<tr>';
+        $tabla.= '<td>'.$movimiento[2].'</td>';
+        $tabla.= '<td>'.$movimiento[3].'</td>';
+        $tabla.= '<td>'.$movimiento[4].'</td>';
+        $tabla.= '</tr>';
+        }
+        $tabla.='</table>';
+    }else{
+        $tabla.= '    <div class="container">
+        No hay movimientos que mostrar
+    </div>';
+    }
+    echo $tabla;
+    } catch (PDOException $e) {
+        return $e->getCode().": ".$e->getMessage();
+    }
+}
+
+function eliminarMovimientos(){
+    if ( isset($_POST['eliminar'])) {
+        foreach ($_POST['codigoMov'] as $codigo){
+            destruyeMovimiento($codigo); 
+        }
+    }   
+
+}
+function elementosEliminar(){
+
+    $connection=conexionBBDD();
+    $login = reloadUser();
+    $tabla ="";
+    
+    try {
+        $consulta = $connection->prepare("SELECT * FROM movimientos WHERE loginUsu=? ORDER BY `movimientos`.`fecha` DESC LIMIT 10");
+        $consulta->bindParam(1, $login);
+        $consulta->execute();
+        if ($consulta->fetch()) {
+            $tabla.='<table><tr><th></th><th>Fecha del movimiento</th><th>Concepto</th><th>Cantidad</th></tr>';
+       $i = 0;
+        while ($movimiento = $consulta->fetch()){
+        $tabla.= '<tr>';
+        $tabla.= '<td><input type="checkbox" name="codigoMov[]" value="'.$movimiento[0].'"/></td>';       
+        $tabla.= '<td>'.$movimiento[2].'</td>';
+        $tabla.= '<td>'.$movimiento[3].'</td>';
+        $tabla.= '<td>'.$movimiento[4].'</td>';
+        $tabla.= '</tr>';
+        }
+        $tabla.='</table>';
+    }else{
+        $tabla.= '<div class="container">
+        No hay movimientos que mostrar
+    </div>';
+    }
+    echo $tabla;
+    } catch (PDOException $e) {
+        return $e->getCode().": ".$e->getMessage();
+    }
+}
+
+function destruyeMovimiento($idMov){
+    $connection=conexionBBDD();
+    $login = reloadUser();
+    
+    try {
+        $consulta = $connection->prepare("DELETE FROM movimientos WHERE codigoMov = :codigo AND loginUsu = :login");
+        $consulta->bindParam(':login', $login);
+        $consulta->bindParam(':codigo', $idMov);
+        $consulta->execute();
+
+    } catch (PDOException $e) {
+        return $e->getCode().": ".$e->getMessage();
+    }
+}
 
 function totalMonetario($param){
     $connection=conexionBBDD();
@@ -170,6 +291,79 @@ function deficitPresupuesto(){
     return $presupuesto;
 }
 
+/**
+ * Checks de la aplicacion
+ */
+
+ /**
+  * Funcion para la impresion de errores por pantalla
+  */
+ function checkParametrosMovimientos($fecha, $cantidad, $concepto){
+    
+    $error="";
+    
+    if (checkFecha($fecha)!=false) {
+         $error.="<p>".checkFecha($fecha)."</p>";
+     } 
+     if(checkCantidad($cantidad)!=false) {
+        $error.="<p>".checkCantidad($cantidad)."</p>";
+     }
+     if(checkConcepto($concepto)!=false) {
+        $error.="<p>".checkConcepto($concepto)."</p>";
+    }
+    
+    if (!empty($error) ) {
+        return $error;
+    } else {
+        return true;
+    }
+    
+ }
+
+ /**
+  * Chequeo del campo concepto
+  */
+ function checkConcepto($concepto){
+
+    if ( empty($concepto) ) {
+        return 'El concepto es obligatorio.';
+    }
+
+    if ( strlen($concepto) > 20 ) {
+		return "El concepto no puede tener mas de 20 caracteres.";
+    }
+    
+    return false;
+ }
+
+  /**
+  * Chequeo del campo cantidad
+  */
+ function checkCantidad($cantidad){
+    if ( empty($cantidad) ) {
+        return 'La cantidad no ha sido indicada';
+    }
+    if ($cantidad <= 0){
+        return 'La cantidad debe ser mayor que 0.En caso de ser un gasto se convertira en negativo en el backend.';
+    }
+
+    return false;
+
+ }
+
+  /**
+  * Chequeo del campo fecha
+  */
+ function checkFecha($fecha){
+    if ( empty($fecha) ) {
+        return 'Fecha no indicada.';
+    }
+    $fechaTrozos = explode("-", $fecha);
+    if ( count($fechaTrozos) != 3 || !checkdate($fechaTrozos[1], $fechaTrozos[2], $fechaTrozos[0])) {
+        return 'Error en el formato de la fecha';
+    }
+    return false;
+ }
 /**
  * Sentencias para base de datos
  * INSERT INTO `usuarios` (`login`, `password`, `nombre`, `fNacimiento`, `presupuesto`) VALUES ('test01', 'test01', 'Test01', '2020-01-15', '6000');
