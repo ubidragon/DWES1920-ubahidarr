@@ -391,6 +391,46 @@ function deficitPresupuesto(){
     }
 }
 
+function login(){
+    $connection=conexionBBDD();
+    if (isset($_POST["loginUser"]) && !empty($_POST["loginUser"]) && isset($_POST["password"]) && !empty($_POST["password"])) {
+        $loginUsu = $_POST["loginUser"];
+        $usuario = "";
+        $password= $_POST["password"];
+
+        try {
+            $consulta = $connection->prepare("SELECT login, password FROM usuarios WHERE login=?");
+            $consulta->bindParam(1, $loginUsu);
+            $consulta->execute();
+            $usuario= $consulta->fetch();
+            if(is_array($usuario) ){
+
+                if ((!empty($loginUsu) && $usuario['login']==$loginUsu) && (!empty($password) && $usuario['password']==$password)) {
+                    $uri = ParentUri().'user/userMenu.php';
+                    RedirectWithMethodPost($uri, $_POST);                    
+                }else{
+                    echo "<div class='navbarError'><p>Error. Usuario y/o Contraseña incorrectos.</p></div>";
+                }
+            }else{
+                echo "<div class='navbarError'><p>Error. Usuario y/o Contraseña incorrectos.</p></div>";
+
+            }
+
+        } catch (PDOException $e) {
+            return $e->getCode().": ".$e->getMessage();
+        }
+
+    }
+}
+
+function salir(){
+    if (isset($_POST["loginUser"]) && !empty($_POST["loginUser"])) {
+        unset($_POST["loginUser"]);
+        $_POST=array();
+        
+    }
+}
+
 /**
  * Sentencias para base de datos
  * INSERT INTO `usuarios` (`login`, `password`, `nombre`, `fNacimiento`, `presupuesto`) VALUES ('test01', 'test01', 'Test01', '2020-01-15', '6000');
