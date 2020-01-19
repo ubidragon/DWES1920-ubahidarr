@@ -1,10 +1,17 @@
 <?php
 require_once("../includes/header.inc.php");
+eliminarMovimientos()
 ?>
-<link rel="stylesheet" href="../css/custom.css">
-<h2>Eliminar Movimiento</h2>
-<p><i>Nombre de Usuario - Fecha y hora de la conexion</i></p>
-
+<h2>Eliminar Movimientos</h2>
+<form action="eliminarMov.php" method="post">
+        <input type="hidden" name="loginUser" value="<?php echo reloadUser();?>">
+<?php
+elementosEliminar();
+?>
+  <div class="container">        
+    <button type="submit" name="eliminar">Eliminar movimientos</button>
+  </div>
+</form>
 <?php
 require_once '../includes/pie.php';
 ?>
