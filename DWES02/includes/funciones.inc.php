@@ -442,6 +442,7 @@ function salir(){
     }
 }
 
+
 /**
  * Administracion
  */
@@ -600,10 +601,3 @@ function checkPassword(){
  * 
  */
 
-
-function salir(){
-    if (isset($_POST["loginUser"]) && !empty($_POST["loginUser"])) {
-     unset($_POST["loginUser"]);
-    // $_POST=array();
-    }
-}
