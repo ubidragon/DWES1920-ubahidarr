@@ -443,6 +443,150 @@ function salir(){
 }
 
 /**
+ * Administracion
+ */
+
+
+/**
+ * Funcion para insertar nuevos usuario en la base de datos
+ */
+
+function nuevoUser(){
+    $connection=conexionBBDD();
+
+    if (isset($_POST["crear"])){
+
+        if (checkCampos()) {
+            # code...
+            $login = $_POST['newLogin'];
+            $password = $_POST['pass'];
+            $nombre = $_POST['name'];
+            $fNacimiento = $_POST['fechaNacimiento'];
+            $presupuesto = $_POST['presupuesto'];
+
+            try {
+
+                $consulta = $connection->prepare('INSERT INTO usuarios (login, password, nombre, fNacimiento, presupuesto) VALUES (:login, :password, :nombre , :fNacimiento, :presupuesto)' );
+                $consulta->bindParam(':login', $login);
+                $consulta->bindParam(':password', $password);
+                $consulta->bindParam(':nombre', $nombre);
+                $consulta->bindParam(':fNacimiento', $fNacimiento);
+                $consulta->bindParam(':presupuesto', $presupuesto);
+                $consulta->execute();
+            } catch (PDOException $e) {
+
+                return $e->getCode().": ".$e->getMessage();
+            }
+        }else{
+            echo "<div class='navbarError'>".checkCampos()."</div>";
+        }
+    }
+}
+
+function checkCampos(){
+
+        $error="";
+        
+        if (checkLogin()!=false) {
+             $error.="<p>".checkLogin()."</p>";
+         } 
+         if(checkPassword()!=false) {
+            $error.="<p>".checkPassword()."</p>";
+         }
+         if(checkNombre()!=false) {
+            $error.="<p>".checkNombre()."</p>";
+        }
+        if(checkNacimiento()!=false) {
+            $error.="<p>".checkNacimiento()."</p>";
+        }
+
+        if(checkPresupuesto()!=false) {
+            $error.="<p>".checkPresupuesto()."</p>";
+        }
+        
+        
+        if (!empty($error) ) {
+            return $error;
+        } else {
+            return true;
+        }
+        
+}
+
+function checkNacimiento(){
+   if ( empty($_POST['fechaNacimiento']) ) {
+       return 'Fecha no indicada.';
+   }
+   $fechaTrozos = explode("-", $_POST['fechaNacimiento']);
+   if ( count($fechaTrozos) != 3 || !checkdate($fechaTrozos[1], $fechaTrozos[2], $fechaTrozos[0])) {
+       return 'Error en el formato de la fecha';
+   }
+   return false;
+}
+
+function checkPresupuesto(){
+    if ( empty($_POST['presupuesto']) ) {
+        return 'El presupuesto no ha sido indicado';
+    }
+    if ($_POST['presupuesto'] <= 0){
+        return 'El presupuesto debe ser mayor que 0';
+    }
+
+    return false;
+
+ }
+
+ function checkNombre(){
+
+    if ( empty($_POST['name'] ) ) {
+        return 'El nombre es obligatorio.';
+    }
+
+    if ( strlen($_POST['name'] ) > 30 ) {
+		return "El nombre no puede tener mas de 30 caracteres.";
+    }
+    
+    return false;
+ }
+
+function checkLogin(){
+    if (empty($_POST['newLogin']) ) {
+        return 'El login es obligatorio.';
+    }
+        $connection=conexionBBDD();
+    
+        $loginUsu = $_POST["newLogin"];
+
+        try {
+            $consulta = $connection->prepare("SELECT login FROM usuarios WHERE login=?");
+            $consulta->bindParam(1, $loginUsu);
+            $consulta->execute();
+            $usuario= $consulta->fetch();
+            if(is_array($usuario) ){
+                return "El usuario ya existe en la base de datos";
+            }
+
+        }catch (PDOException $e) {
+
+            return $e->getCode().": ".$e->getMessage();
+        }
+    
+    return false;
+}
+function checkPassword(){
+
+    if (empty($_POST['pass'])) {
+        return 'La contraseña es obligatoria';
+    } 
+
+    if ($_POST['pass']!= $_POST['checkPass']){
+        return 'Las contraseñas deben de seer iguales';
+    }
+
+    return false;
+}
+
+/**
  * Sentencias para base de datos
  * INSERT INTO `usuarios` (`login`, `password`, `nombre`, `fNacimiento`, `presupuesto`) VALUES ('test01', 'test01', 'Test01', '2020-01-15', '6000');
  * INSERT INTO `movimientos` (`codigoMov`, `loginUsu`, `fecha`, `concepto`, `cantidad`) VALUES ('2', 'test01', '2020-01-08', 'test01', '9.5');
