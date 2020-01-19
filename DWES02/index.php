@@ -1,10 +1,18 @@
 <?php
-require_once("./includes/header.inc.php");
-
+require_once("./includes/funciones.inc.php");
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body> 
+<?php
+login();
 ?>
 <link rel="stylesheet" href="./css/custom.css">
 <h2>Pantalla de Inicio</h2>
-<form action="./user/userMenu.php" method="post">
+<form action="index.php" method="post">
   <div class="container">
     <label for="loginUser"><b>Usuario</b></label>
     <input type="text" placeholder="Introduzca usuario" name="loginUser" required>
