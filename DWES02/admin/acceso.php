@@ -15,7 +15,11 @@ checkAdmin();
     <button type="submit">Acceder como Administrador</button>
   </div>
 </form>
-
+<form>
+  <div class="container">        
+    <button type="submit" formaction="<?php echo $uri; ?>">Acceder como Usuario</button>
+  </div>
+</form>
 <?php
 require_once '../includes/pie.php';
 ?>

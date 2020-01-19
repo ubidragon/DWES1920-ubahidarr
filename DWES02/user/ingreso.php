@@ -2,8 +2,9 @@
 require_once("../includes/header.inc.php");
 nuevoIngreso();
 ?>
-<link rel="stylesheet" href="../css/custom.css">
+
 <h2>Ingreso</h2>
+<?php nuevoMovimiento('ingresos'); ?>
 <form action="ingreso.php" method="post">
 <input type="hidden" name="loginUser" value="<?php echo reloadUser(); ?>">
     <div class="container">
