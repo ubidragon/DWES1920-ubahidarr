@@ -363,6 +363,7 @@ function deficitPresupuesto(){
         return 'Error en el formato de la fecha';
     }
     return false;
+ }
 
 /**
  * Funcion para poder hacer el redirect a UltimosMovimientos pudiendo pasar parametros y asi persistir el login del usuario.
@@ -421,6 +422,16 @@ function login(){
         }
 
     }
+}
+
+
+function ParentUri(){
+    $parent = explode("/", trim(dirname($_SERVER['PHP_SELF'])));
+    $uri = 'http://'.$_SERVER['SERVER_NAME'];
+    foreach($parent as $path){
+        $uri.=$path."/";
+    }
+    return $uri;
 }
 
 function salir(){
