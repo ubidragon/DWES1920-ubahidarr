@@ -109,6 +109,14 @@ span.psw {
   border: none;
 }
 
+.navbarError {
+  list-style-type: none;
+ 
+  overflow: hidden;
+  color: white;
+  background-color: red;
+}
+
 .footer {
   position: fixed;
   left: 0;
@@ -135,4 +143,20 @@ text-align: center;
 
 .boton:hover {
   opacity: 0.8;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
 }
