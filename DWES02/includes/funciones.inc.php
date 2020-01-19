@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * Funcion para generalizar la conexion con bbdd
+ */
 function conexionBBDD(){
     global $connection;
     try {
@@ -20,7 +22,10 @@ function reloadUser(){
     if (isset($_POST["loginUser"]) && !empty($_POST["loginUser"])) {
         $user=$_POST["loginUser"];
         return $user;
-    } 
+    } else if (isset($_GET["loginUser"]) && !empty($_GET["loginUser"])){
+        $user=$_GET["loginUser"];
+        return $user;
+    }
 
 }
 

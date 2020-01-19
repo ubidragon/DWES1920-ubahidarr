@@ -10,20 +10,19 @@ $parent = explode("/", trim(dirname($_SERVER['PHP_SELF'])));
                         $uri.=$path."/";
                     }
 
-
-
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 <body> 
 <link rel="stylesheet" href="<?php echo $uri.'css/custom.css'?>">
 <form class="formNotBorder">   
-	<?php if (isset($_POST["loginUser"]) && !empty($_POST["loginUser"])) { ?>
-		<input type="hidden" name="loginUser" value="<?php echo $_POST["loginUser"] ?>">
+	<?php if ((isset($_POST["loginUser"]) && !empty($_POST["loginUser"])) || (isset($_GET["loginUser"]) && !empty($_GET["loginUser"]))){ ?>
+		<input type="hidden" name="loginUser" value="<?php echo reloadUser();?>">
 		<ul class="navbar">
 			<li class="navbarChild"><button type="submit" formmethod="post" formaction="<?php echo $uri.'user/userMenu.php'; ?>">Menu de usuario</button></li>
 			<li class="navbarChild"><button type="submit" formmethod="post" formaction="<?php echo $uri.'user/ultimosMovs.php'; ?>">Ultimos movimientos</button></li>
@@ -32,7 +31,7 @@ $parent = explode("/", trim(dirname($_SERVER['PHP_SELF'])));
         	<li class="navbarChild"><button type="submit" formmethod="post" formaction="<?php echo $uri.'user/eliminarMov.php'; ?>">Eliminar movimientos</button></li>
 			<li class="navbarChild"><a href="<?php echo $uri; ?>">Cerrar sesión</a></li>		
 		</ul>
-		<p><i>Usuario: <?php echo $_POST["loginUser"]?></i></p>
+		<p><i>Usuario: <?php echo reloadUser();?></i></p>
 		<p><i>Total de ingresos: <?php echo totalMonetario('ingresos');?></i></p>
 		<p><i>Total de gastos: <?php echo totalMonetario('gastos');?></i></p>
 		<?php echo deficitPresupuesto();?>
