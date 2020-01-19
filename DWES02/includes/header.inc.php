@@ -33,6 +33,9 @@ $parent = explode("/", trim(dirname($_SERVER['PHP_SELF'])));
 			<li class="navbarChild"><a href="<?php echo $uri; ?>">Cerrar sesión</a></li>		
 		</ul>
 		<p><i>Usuario: <?php echo $_POST["loginUser"]?></i></p>
+		<p><i>Total de ingresos: <?php echo totalMonetario('ingresos');?></i></p>
+		<p><i>Total de gastos: <?php echo totalMonetario('gastos');?></i></p>
+		<?php echo deficitPresupuesto();?>
 	<?php }
 		else if ((isset($_POST["admin"]) && !empty($_POST["admin"])) || (isset($_GET["admin"]) && !empty($_GET["admin"])) ){ 				
 	?>

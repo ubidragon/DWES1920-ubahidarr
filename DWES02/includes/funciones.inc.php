@@ -111,6 +111,60 @@ function ultimoCodMov($loginUsu){
 }
 
 
+
+function totalMonetario($param){
+    $connection=conexionBBDD();
+    $login = reloadUser();
+    
+    try {
+        if ($param == 'ingresos') {
+            $consulta = $connection->prepare("SELECT CAST(SUM(cantidad) as DECIMAL(12,2)) FROM movimientos WHERE loginUsu=? and cantidad>0");
+        } else if ($param == 'gastos') {
+            $consulta = $connection->prepare("SELECT CAST(SUM(cantidad) as DECIMAL(12,2)) FROM movimientos WHERE loginUsu=? and cantidad<0");
+        }
+        $consulta->bindParam(1, $login);
+        $consulta->execute();
+        $total =$consulta->fetch(PDO::FETCH_NUM)[0];
+        if (empty($total)) {
+            $total = "Sin movimientos registrados";
+        }
+        return $total;
+    } catch (PDOException $e) {
+        return $e->getCode().": ".$e->getMessage();
+    }
+}
+
+function presupuestoPorUsuario(){
+    $connection=conexionBBDD();
+    $login = reloadUser();
+    
+    try {
+        $consulta = $connection->prepare("SELECT presupuesto FROM usuarios WHERE login=?");
+        $consulta->bindParam(1, $login);
+        $consulta->execute();
+        $total =$consulta->fetch(PDO::FETCH_NUM)[0];
+        if (empty($total)) {
+            $total = "Sin presupuesto establecido";
+        }
+        return $total;
+    } catch (PDOException $e) {
+        return $e->getCode().": ".$e->getMessage();
+    }
+}
+
+function deficitPresupuesto(){
+    $gastos= totalMonetario('gastos');
+    $gastos*=-1;
+    $presupuestoBD = presupuestoPorUsuario();
+    $presupuesto ="";
+    if ($presupuestoBD>$gastos || !is_numeric($gastos)) {
+        $presupuesto = '<p style="color:green"><i>Presupuesto anual: '.$presupuestoBD.'</i></p>';
+    } else {
+        $presupuesto = '<p style="color:red"><i>Presupuesto anual: '.$presupuestoBD.'</i></p>';
+    }
+    return $presupuesto;
+}
+
 /**
  * Sentencias para base de datos
  * INSERT INTO `usuarios` (`login`, `password`, `nombre`, `fNacimiento`, `presupuesto`) VALUES ('test01', 'test01', 'Test01', '2020-01-15', '6000');
