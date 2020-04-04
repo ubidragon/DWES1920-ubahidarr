@@ -1,0 +1,2055 @@
+{
+  "id": "db70064d-3d55-4245-9518-2e5c5ac21fc1",
+  "version": "2.0",
+  "name": "DWES02",
+  "url": "http://localhost/dwes/tarea2/Hidalgo_Arriaga_Ubaldo_DWES02_Tarea/",
+  "tests": [{
+    "id": "f7a121c1-e8ee-4c23-bc6f-f2322d8f55a2",
+    "name": "Administracion - 1 loginadmin",
+    "commands": [{
+      "id": "fe50d7f1-d5d4-4e85-ac45-12f5e305b9e2",
+      "comment": "",
+      "command": "open",
+      "target": "/dwes/tarea2/Hidalgo_Arriaga_Ubaldo_DWES02_Tarea/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8819931a-0e73-4461-84c8-67dd08efaacb",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1270x1018",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7c08c654-5428-400d-bd68-aac10d9c99ec",
+      "comment": "",
+      "command": "click",
+      "target": "css=form:nth-child(4) button",
+      "targets": [
+        ["css=form:nth-child(4) button", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//form[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Acceder como Administrador')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1804d14f-4f51-493f-a4f5-c4c003e87f1c",
+      "comment": "",
+      "command": "click",
+      "target": "name=admin",
+      "targets": [
+        ["name=admin", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='admin']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "26c5613b-e7a2-42a8-8f2b-d9b559078193",
+      "comment": "",
+      "command": "type",
+      "target": "name=admin",
+      "targets": [
+        ["name=admin", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='admin']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "daw"
+    }, {
+      "id": "9b222115-5fb0-4d73-87ad-1cebe7fb3b8b",
+      "comment": "",
+      "command": "click",
+      "target": "name=adminPassword",
+      "targets": [
+        ["name=adminPassword", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='adminPassword']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7313cd0e-e015-4308-ad6b-66ed29bba369",
+      "comment": "",
+      "command": "type",
+      "target": "name=adminPassword",
+      "targets": [
+        ["name=adminPassword", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='adminPassword']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "daw"
+    }, {
+      "id": "d55e8845-0d43-4f05-8440-84a66fd097c2",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(5)",
+      "targets": [
+        ["css=button:nth-child(5)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Acceder como Administrador')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "c4df8d5a-65b6-4120-8ac1-7cf029e4b8d9",
+    "name": "Administracion - 2 nuevoUsuario",
+    "commands": [{
+      "id": "24761998-6a61-45cf-aa2d-77cbb0044758",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0939ffbe-d8d7-4af2-9996-cf10daabd286",
+      "comment": "",
+      "command": "click",
+      "target": "css=form:nth-child(4) button",
+      "targets": [
+        ["css=form:nth-child(4) button", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//form[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Acceder como Administrador')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "837559ed-0eea-4b4d-811b-65dcafa63ad7",
+      "comment": "",
+      "command": "click",
+      "target": "name=admin",
+      "targets": [
+        ["name=admin", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='admin']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4c56185e-67a7-4eb6-83a7-a7380340d0c1",
+      "comment": "",
+      "command": "type",
+      "target": "name=admin",
+      "targets": [
+        ["name=admin", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='admin']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "daw"
+    }, {
+      "id": "59fe1a37-abbc-4cb3-b050-a4d2216ad483",
+      "comment": "",
+      "command": "click",
+      "target": "name=adminPassword",
+      "targets": [
+        ["name=adminPassword", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='adminPassword']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d4eb16a-56a5-4b45-925a-4b4d0a914123",
+      "comment": "",
+      "command": "type",
+      "target": "name=adminPassword",
+      "targets": [
+        ["name=adminPassword", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='adminPassword']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "daw"
+    }, {
+      "id": "0e89b6aa-8310-4609-9503-557008b59a38",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(5)",
+      "targets": [
+        ["css=button:nth-child(5)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Acceder como Administrador')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "85e08a0b-657b-4303-b9fe-85eb7889ec8e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.container > button:nth-child(1)",
+      "targets": [
+        ["css=.container > button:nth-child(1)", "css:finder"],
+        ["xpath=(//button[@type='submit'])[5]", "xpath:attributes"],
+        ["xpath=//div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a4fa165d-eba7-40f5-9204-0e99fec3438c",
+      "comment": "",
+      "command": "click",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.container:nth-child(2) > input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0cd9cf34-ce1b-42f3-a0c6-7b2de460dc23",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.container:nth-child(2) > input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "UsuarioPrueba"
+    }, {
+      "id": "98ab5d37-6a75-4556-92bb-84f9198803d6",
+      "comment": "",
+      "command": "click",
+      "target": "name=newLogin",
+      "targets": [
+        ["name=newLogin", "name"],
+        ["css=.container:nth-child(2) > input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='newLogin']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d51374df-56ac-4ef2-8819-d2ee5e185721",
+      "comment": "",
+      "command": "click",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.container:nth-child(2) > input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dcb416fa-976b-47c5-a1a1-1079b0a1278d",
+      "comment": "",
+      "command": "click",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.container:nth-child(2) > input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dd2486a4-4494-4a3b-b53f-6d475b0dc38a",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.container:nth-child(2) > input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "UsuarioPrueba"
+    }, {
+      "id": "e0abbe4a-e610-446c-9869-0528442306d0",
+      "comment": "",
+      "command": "click",
+      "target": "name=newLogin",
+      "targets": [
+        ["name=newLogin", "name"],
+        ["css=.container:nth-child(2) > input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='newLogin']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9110a582-803f-4b89-8d1b-83b2c66e5693",
+      "comment": "",
+      "command": "type",
+      "target": "name=newLogin",
+      "targets": [
+        ["name=newLogin", "name"],
+        ["css=.container:nth-child(2) > input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='newLogin']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "prueba"
+    }, {
+      "id": "d2de31ff-f86d-4777-bc8c-8f97291d6bc6",
+      "comment": "",
+      "command": "click",
+      "target": "name=pass",
+      "targets": [
+        ["name=pass", "name"],
+        ["css=.container:nth-child(3) > input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='pass']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "03f91e41-0b94-4d29-8ea9-96122b22809c",
+      "comment": "",
+      "command": "type",
+      "target": "name=pass",
+      "targets": [
+        ["name=pass", "name"],
+        ["css=.container:nth-child(3) > input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='pass']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "prueba"
+    }, {
+      "id": "000e6a6b-57a3-456a-94ff-78012cbb05bb",
+      "comment": "",
+      "command": "type",
+      "target": "name=checkPass",
+      "targets": [
+        ["name=checkPass", "name"],
+        ["css=.container:nth-child(3) > input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='checkPass']", "xpath:attributes"],
+        ["xpath=//div[2]/input[2]", "xpath:position"]
+      ],
+      "value": "prueba"
+    }, {
+      "id": "cf7771b6-5301-4b12-b4a5-9659e07deea8",
+      "comment": "",
+      "command": "click",
+      "target": "name=fechaNacimiento",
+      "targets": [
+        ["name=fechaNacimiento", "name"],
+        ["css=.container:nth-child(4) > input", "css:finder"],
+        ["xpath=//input[@name='fechaNacimiento']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "38f5637f-31fe-46a3-a1f3-3f8653f96701",
+      "comment": "",
+      "command": "type",
+      "target": "name=fechaNacimiento",
+      "targets": [
+        ["name=fechaNacimiento", "name"],
+        ["css=.container:nth-child(4) > input", "css:finder"],
+        ["xpath=//input[@name='fechaNacimiento']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "2010-12-22"
+    }, {
+      "id": "d165a667-c799-431b-832a-5c83bf3b89e4",
+      "comment": "",
+      "command": "click",
+      "target": "name=presupuesto",
+      "targets": [
+        ["name=presupuesto", "name"],
+        ["css=.container:nth-child(5) > input", "css:finder"],
+        ["xpath=//input[@name='presupuesto']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c84f01eb-1c13-4d6d-98a0-f80ac7bc7c23",
+      "comment": "",
+      "command": "type",
+      "target": "name=presupuesto",
+      "targets": [
+        ["name=presupuesto", "name"],
+        ["css=.container:nth-child(5) > input", "css:finder"],
+        ["xpath=//input[@name='presupuesto']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "6000"
+    }, {
+      "id": "6a21af57-e37b-42b5-9cd2-793fb183bb2b",
+      "comment": "",
+      "command": "click",
+      "target": "name=crear",
+      "targets": [
+        ["name=crear", "name"],
+        ["css=.container > button", "css:finder"],
+        ["xpath=//button[@name='crear']", "xpath:attributes"],
+        ["xpath=//div[5]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Guardar nuevo usuario')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d2064875-aa02-4c26-af59-aaf09cf61e21",
+      "comment": "",
+      "command": "open",
+      "target": "/dwes/tarea2/Hidalgo_Arriaga_Ubaldo_DWES02_Tarea/",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "d5e9a67b-8ca9-4ddb-aba8-d32d82c3a1bb",
+    "name": "Administracion - 3 nuevoUsuarioPrecargado1",
+    "commands": [{
+      "id": "8e96b656-086c-432e-a66b-803bda41e883",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/dwes/tarea2/Hidalgo_Arriaga_Ubaldo_DWES02_Tarea/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "55cd1897-b2fc-4086-bad4-86805eae5236",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x999",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "946a4836-beb2-4a2e-884f-d55a3a7311bc",
+      "comment": "",
+      "command": "click",
+      "target": "css=form:nth-child(4) button",
+      "targets": [
+        ["css=form:nth-child(4) button", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//form[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Acceder como Administrador')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b67d5dd4-d839-45af-b572-51e11fa88789",
+      "comment": "",
+      "command": "click",
+      "target": "name=admin",
+      "targets": [
+        ["name=admin", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='admin']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "57cb131e-88df-4b0f-9a88-5e0638e729fa",
+      "comment": "",
+      "command": "type",
+      "target": "name=admin",
+      "targets": [
+        ["name=admin", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='admin']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "daw"
+    }, {
+      "id": "b186d21d-ba5e-4643-96b2-bd77d730516d",
+      "comment": "",
+      "command": "click",
+      "target": "name=adminPassword",
+      "targets": [
+        ["name=adminPassword", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='adminPassword']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "89aca2df-7c02-4dbe-b418-6d75b828690c",
+      "comment": "",
+      "command": "type",
+      "target": "name=adminPassword",
+      "targets": [
+        ["name=adminPassword", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='adminPassword']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "daw"
+    }, {
+      "id": "64ddc0a0-d6fc-47d0-9a9e-5d64bd29d84b",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(5)",
+      "targets": [
+        ["css=button:nth-child(5)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Acceder como Administrador')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "552c542f-c996-4fc5-922b-ca188a8c824b",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(2)",
+      "targets": [
+        ["css=button:nth-child(2)", "css:finder"],
+        ["xpath=(//button[@type='submit'])[6]", "xpath:attributes"],
+        ["xpath=//button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "459b4918-bcd4-44f0-a0ed-c3c2ab3e6f93",
+      "comment": "",
+      "command": "click",
+      "target": "name=crear",
+      "targets": [
+        ["name=crear", "name"],
+        ["css=.container > button", "css:finder"],
+        ["xpath=//button[@name='crear']", "xpath:attributes"],
+        ["xpath=//div[5]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Guardar nuevo usuario')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0b8bc9ad-b8b7-4031-9401-2d874161a0e2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.navbarChild:nth-child(1) > button",
+      "targets": [
+        ["css=.navbarChild:nth-child(1) > button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Menú de administracion')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "0a085b3c-395e-4025-a5b0-e2f9d5888a42",
+    "name": "Administracion - 4 nuevoUsuarioPrecargado2",
+    "commands": [{
+      "id": "5ef24e2f-f191-4b4f-a179-946482e3c277",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/dwes/tarea2/Hidalgo_Arriaga_Ubaldo_DWES02_Tarea/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6811499d-65b4-494c-9030-bf910d3662d5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x999",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5833bb81-a286-4013-80d6-f49e7b896d2b",
+      "comment": "",
+      "command": "click",
+      "target": "css=form:nth-child(4) button",
+      "targets": [
+        ["css=form:nth-child(4) button", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//form[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Acceder como Administrador')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "20aa5d58-0975-4b26-8a09-34dd2c5675b6",
+      "comment": "",
+      "command": "click",
+      "target": "name=admin",
+      "targets": [
+        ["name=admin", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='admin']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3aa768ec-d579-4d1d-b7e8-a0a78a7f1513",
+      "comment": "",
+      "command": "type",
+      "target": "name=admin",
+      "targets": [
+        ["name=admin", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='admin']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "daw"
+    }, {
+      "id": "603a53d5-90cf-4882-9005-41206bc9fdc5",
+      "comment": "",
+      "command": "click",
+      "target": "name=adminPassword",
+      "targets": [
+        ["name=adminPassword", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='adminPassword']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "58d95d83-5169-4a5f-86a5-39ecf7279b73",
+      "comment": "",
+      "command": "type",
+      "target": "name=adminPassword",
+      "targets": [
+        ["name=adminPassword", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='adminPassword']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "daw"
+    }, {
+      "id": "17555422-975c-4c71-85ea-7acbe02e69d9",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(5)",
+      "targets": [
+        ["css=button:nth-child(5)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Acceder como Administrador')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dab5c9eb-91cc-41a7-b2a0-49242fa4c870",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(3)",
+      "targets": [
+        ["css=button:nth-child(3)", "css:finder"],
+        ["xpath=(//button[@type='submit'])[7]", "xpath:attributes"],
+        ["xpath=//button[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8abf6024-4844-46aa-b068-9cecf0321a47",
+      "comment": "",
+      "command": "click",
+      "target": "name=crear",
+      "targets": [
+        ["name=crear", "name"],
+        ["css=.container > button", "css:finder"],
+        ["xpath=//button[@name='crear']", "xpath:attributes"],
+        ["xpath=//div[5]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Guardar nuevo usuario')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "7ed36e30-bb83-4616-aada-f835da448b25",
+    "name": "Administracion - 5 actualizaUsuario",
+    "commands": [{
+      "id": "2a8778f0-37db-4755-b129-040f79ab4585",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/dwes/tarea2/Hidalgo_Arriaga_Ubaldo_DWES02_Tarea/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "02633f0b-1724-401a-a7de-468c8dfe317f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x999",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d8c6cb30-866a-422c-8072-b1e88c75b829",
+      "comment": "",
+      "command": "click",
+      "target": "css=form:nth-child(4) button",
+      "targets": [
+        ["css=form:nth-child(4) button", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//form[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Acceder como Administrador')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bc153c8a-34f3-400b-89e4-433ec6ae8293",
+      "comment": "",
+      "command": "click",
+      "target": "name=admin",
+      "targets": [
+        ["name=admin", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='admin']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ec47489d-4fff-4c13-98d2-e246547070e6",
+      "comment": "",
+      "command": "type",
+      "target": "name=admin",
+      "targets": [
+        ["name=admin", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='admin']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "daw"
+    }, {
+      "id": "3c045919-0db4-47cd-b90e-7884a4697fcc",
+      "comment": "",
+      "command": "click",
+      "target": "name=adminPassword",
+      "targets": [
+        ["name=adminPassword", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='adminPassword']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "24ca1a48-e711-484a-af55-b29323c577af",
+      "comment": "",
+      "command": "type",
+      "target": "name=adminPassword",
+      "targets": [
+        ["name=adminPassword", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='adminPassword']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "daw"
+    }, {
+      "id": "00a37e4f-5f04-4e5a-9d77-469b458abca0",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(5)",
+      "targets": [
+        ["css=button:nth-child(5)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Acceder como Administrador')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "df46fc06-b05c-4dd4-ab89-cbd19685ab8f",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(4)",
+      "targets": [
+        ["css=button:nth-child(4)", "css:finder"],
+        ["xpath=(//button[@type='submit'])[8]", "xpath:attributes"],
+        ["xpath=//button[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bde2d24d-af8d-4596-a058-613580cf4c51",
+      "comment": "",
+      "command": "click",
+      "target": "name=searchLogin",
+      "targets": [
+        ["name=searchLogin", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='searchLogin']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c43b5ae-18ea-4c18-b774-77664a93a967",
+      "comment": "",
+      "command": "type",
+      "target": "name=searchLogin",
+      "targets": [
+        ["name=searchLogin", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='searchLogin']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "prueba1"
+    }, {
+      "id": "760b6aee-9330-4084-acb0-ae443682716e",
+      "comment": "",
+      "command": "click",
+      "target": "name=search",
+      "targets": [
+        ["name=search", "name"],
+        ["css=.container > button", "css:finder"],
+        ["xpath=//button[@name='search']", "xpath:attributes"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Buscar usuario')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dcf2701e-9ffb-4f3b-a25f-ebfa37189096",
+      "comment": "",
+      "command": "click",
+      "target": "name=searchLogin",
+      "targets": [
+        ["name=searchLogin", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='searchLogin']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6f37e499-8024-43e6-964b-dfaeafc548a7",
+      "comment": "",
+      "command": "type",
+      "target": "name=searchLogin",
+      "targets": [
+        ["name=searchLogin", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='searchLogin']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "prueba"
+    }, {
+      "id": "cf781c59-8a82-42ca-91ca-92350ca80d58",
+      "comment": "",
+      "command": "click",
+      "target": "name=search",
+      "targets": [
+        ["name=search", "name"],
+        ["css=.container > button", "css:finder"],
+        ["xpath=//button[@name='search']", "xpath:attributes"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Buscar usuario')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "719f76e0-2c6c-403b-bd07-0e59026a7c33",
+      "comment": "",
+      "command": "click",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.container:nth-child(3) > input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//form[3]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "217ceb25-1080-4180-80f3-7e7d9f51ed70",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.container:nth-child(3) > input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//form[3]/div/input", "xpath:position"]
+      ],
+      "value": "UsuarioPruebaModificado"
+    }, {
+      "id": "d8e0be38-5483-4aa4-8e6a-4c5cb55eb3f1",
+      "comment": "",
+      "command": "click",
+      "target": "name=fechaNacimiento",
+      "targets": [
+        ["name=fechaNacimiento", "name"],
+        ["css=.container:nth-child(5) > input", "css:finder"],
+        ["xpath=//input[@name='fechaNacimiento']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d0aeaf51-4db7-4e24-be81-b1d3bd1581a1",
+      "comment": "",
+      "command": "type",
+      "target": "name=fechaNacimiento",
+      "targets": [
+        ["name=fechaNacimiento", "name"],
+        ["css=.container:nth-child(5) > input", "css:finder"],
+        ["xpath=//input[@name='fechaNacimiento']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "2010-12-08"
+    }, {
+      "id": "85cd4b0b-164d-4ff2-89b1-68b7cf050b64",
+      "comment": "",
+      "command": "click",
+      "target": "name=presupuesto",
+      "targets": [
+        ["name=presupuesto", "name"],
+        ["css=.container:nth-child(6) > input", "css:finder"],
+        ["xpath=//input[@name='presupuesto']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c32ac3e8-0573-48c3-8e2b-dcb953cdf232",
+      "comment": "",
+      "command": "type",
+      "target": "name=presupuesto",
+      "targets": [
+        ["name=presupuesto", "name"],
+        ["css=.container:nth-child(6) > input", "css:finder"],
+        ["xpath=//input[@name='presupuesto']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "60009"
+    }, {
+      "id": "3770ab1f-86dd-4c36-944b-1a20ec199b20",
+      "comment": "",
+      "command": "click",
+      "target": "name=guardar",
+      "targets": [
+        ["name=guardar", "name"],
+        ["css=.container:nth-child(7) > button", "css:finder"],
+        ["xpath=//button[@name='guardar']", "xpath:attributes"],
+        ["xpath=//div[5]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Guardar cambios del usuario')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "6cb5930d-a293-4c95-9b61-0494431aad47",
+    "name": "Administracion - 6 elimina usuario",
+    "commands": [{
+      "id": "e6b5ebcf-6c28-4c66-b21e-3f58715a22d5",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/dwes/tarea2/Hidalgo_Arriaga_Ubaldo_DWES02_Tarea/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1fa834ea-a505-4765-b73f-36d6e846aa42",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x999",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3615aaba-3ec2-4aec-9d50-eb88492e4449",
+      "comment": "",
+      "command": "click",
+      "target": "css=form:nth-child(4) button",
+      "targets": [
+        ["css=form:nth-child(4) button", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//form[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Acceder como Administrador')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "593b1274-0a3d-4f8b-bf6a-835f7f22fee0",
+      "comment": "",
+      "command": "click",
+      "target": "name=admin",
+      "targets": [
+        ["name=admin", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='admin']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "284b24f8-cca0-4153-91d6-1dbb753e4928",
+      "comment": "",
+      "command": "type",
+      "target": "name=admin",
+      "targets": [
+        ["name=admin", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='admin']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "daw"
+    }, {
+      "id": "16a6d4ff-1d1b-426e-8432-e7c197dfd52e",
+      "comment": "",
+      "command": "click",
+      "target": "name=adminPassword",
+      "targets": [
+        ["name=adminPassword", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='adminPassword']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fdfc80e5-c170-43a0-946a-70c0783c5fbc",
+      "comment": "",
+      "command": "type",
+      "target": "name=adminPassword",
+      "targets": [
+        ["name=adminPassword", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='adminPassword']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "daw"
+    }, {
+      "id": "4130ec8c-5ab0-45f1-b194-bb635e36bec6",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(5)",
+      "targets": [
+        ["css=button:nth-child(5)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Acceder como Administrador')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "99e868f0-1f3a-4090-acf7-2b744de75dc3",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(5)",
+      "targets": [
+        ["css=button:nth-child(5)", "css:finder"],
+        ["xpath=(//button[@type='submit'])[9]", "xpath:attributes"],
+        ["xpath=//button[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ced419eb-5bc4-436f-9671-3455dc413c6b",
+      "comment": "",
+      "command": "type",
+      "target": "name=searchLogin",
+      "targets": [
+        ["name=searchLogin", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='searchLogin']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "a945a6d8-d1c6-4230-abc8-5c1732dd061a",
+      "comment": "",
+      "command": "click",
+      "target": "name=search",
+      "targets": [
+        ["name=search", "name"],
+        ["css=button", "css:finder"],
+        ["xpath=//button[@name='search']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Buscar usuario')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4c29f4b7-25d9-4319-a398-51be3fbc515a",
+      "comment": "",
+      "command": "click",
+      "target": "name=usuario",
+      "targets": [
+        ["name=usuario", "name"],
+        ["css=td > input", "css:finder"],
+        ["xpath=//input[@name='usuario']", "xpath:attributes"],
+        ["xpath=//td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e4f65b1d-69b6-4de3-aede-b3d4b1558e09",
+      "comment": "",
+      "command": "click",
+      "target": "name=eliminar",
+      "targets": [
+        ["name=eliminar", "name"],
+        ["css=form:nth-child(5) button", "css:finder"],
+        ["xpath=//button[@name='eliminar']", "xpath:attributes"],
+        ["xpath=//form[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Eliminar usuario')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "79fe9fab-c8e7-4406-b0a8-7ab23a3b9765",
+    "name": "Administracion - 7 salir",
+    "commands": [{
+      "id": "2aeecf69-1aea-42ad-a6aa-88606506e757",
+      "comment": "",
+      "command": "open",
+      "target": "/dwes/tarea2/Hidalgo_Arriaga_Ubaldo_DWES02_Tarea/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "438aaa92-d983-4da6-b75c-ba8954409dba",
+      "comment": "",
+      "command": "click",
+      "target": "css=form:nth-child(4) button",
+      "targets": [
+        ["css=form:nth-child(4) button", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//form[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Acceder como Administrador')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "59bb16ff-fcbc-4af2-b573-d141259a5eea",
+      "comment": "",
+      "command": "click",
+      "target": "name=admin",
+      "targets": [
+        ["name=admin", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='admin']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f91f836e-97f3-4a18-af83-9a28e6e0e36e",
+      "comment": "",
+      "command": "type",
+      "target": "name=admin",
+      "targets": [
+        ["name=admin", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='admin']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "daw"
+    }, {
+      "id": "a6d47c71-4418-4019-98d8-f6e4ade36c89",
+      "comment": "",
+      "command": "click",
+      "target": "name=adminPassword",
+      "targets": [
+        ["name=adminPassword", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='adminPassword']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1ba08753-8fff-499d-a49b-4b33f97d22a8",
+      "comment": "",
+      "command": "type",
+      "target": "name=adminPassword",
+      "targets": [
+        ["name=adminPassword", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='adminPassword']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "daw"
+    }, {
+      "id": "17abba30-23b5-46f5-914d-03dff66575f6",
+      "comment": "",
+      "command": "click",
+      "target": "css=form:nth-child(5) > .container",
+      "targets": [
+        ["css=form:nth-child(5) > .container", "css:finder"],
+        ["xpath=//div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4b079fbf-133c-4e3f-bf94-1d09b085ffb7",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(5)",
+      "targets": [
+        ["css=button:nth-child(5)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Acceder como Administrador')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fcd93c29-59c0-4ea4-91f9-07fbe727c159",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Cerrar sesión",
+      "targets": [
+        ["linkText=Cerrar sesión", "linkText"],
+        ["css=a", "css:finder"],
+        ["xpath=//a[contains(text(),'Cerrar sesión')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost/dwes/tarea2/Hidalgo_Arriaga_Ubaldo_DWES02_Tarea/']", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Cerrar sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "250bede5-ab47-48d2-a8e6-45d48cf5551c",
+      "comment": "",
+      "command": "click",
+      "target": "css=form:nth-child(4) button",
+      "targets": [
+        ["css=form:nth-child(4) button", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//form[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Acceder como Administrador')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "58ee58b9-9089-4194-a4fa-39e800c6bb4f",
+      "comment": "",
+      "command": "click",
+      "target": "name=admin",
+      "targets": [
+        ["name=admin", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='admin']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fd795c38-3ece-42e2-a5e9-066a387b1458",
+      "comment": "",
+      "command": "type",
+      "target": "name=admin",
+      "targets": [
+        ["name=admin", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='admin']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "daw"
+    }, {
+      "id": "3078b83c-e150-4596-ab03-48ed91289c7d",
+      "comment": "",
+      "command": "click",
+      "target": "name=adminPassword",
+      "targets": [
+        ["name=adminPassword", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='adminPassword']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7cf93fba-19b9-4cfa-9e31-26e814722ccb",
+      "comment": "",
+      "command": "type",
+      "target": "name=adminPassword",
+      "targets": [
+        ["name=adminPassword", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='adminPassword']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "daw"
+    }, {
+      "id": "e9e00828-6f4f-4504-b076-d7c651ec594e",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(5)",
+      "targets": [
+        ["css=button:nth-child(5)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Acceder como Administrador')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1db008c9-22b7-4885-87b4-0c6a187a8eac",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(6)",
+      "targets": [
+        ["css=button:nth-child(6)", "css:finder"],
+        ["xpath=(//button[@type='submit'])[10]", "xpath:attributes"],
+        ["xpath=//button[6]", "xpath:position"],
+        ["xpath=//button[contains(.,'Salir')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "76bdb824-d409-478a-8c34-8f8130bc7f78",
+      "comment": "",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "46f01718-db46-41ae-bea1-dd58e4aeb9e9",
+    "name": "Usuario - 1 Login correcto e incorrecto",
+    "commands": [{
+      "id": "cd6a30a6-684b-402f-bbd3-bc0117a555ac",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/dwes/tarea2/Hidalgo_Arriaga_Ubaldo_DWES02_Tarea/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5a32f81c-18d0-4353-beaf-18cdba9d3a0b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x999",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3e542114-200f-494b-9b00-7b20e767556e",
+      "comment": "",
+      "command": "click",
+      "target": "name=loginUser",
+      "targets": [
+        ["name=loginUser", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='loginUser']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "266c989b-9224-464d-bd7c-f66573ce38af",
+      "comment": "",
+      "command": "type",
+      "target": "name=loginUser",
+      "targets": [
+        ["name=loginUser", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='loginUser']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "7fb2cf30-b21c-4f7a-baae-39207821c6a0",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6c76aea7-b930-45d9-b4d9-a4a704c1b87e",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "29b340d1-6af5-4431-bfd1-10500ea2c043",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(5)",
+      "targets": [
+        ["css=button:nth-child(5)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Acceder como Usuario')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dc2ae92d-4940-42b3-9c0e-cae1755045a8",
+      "comment": "",
+      "command": "click",
+      "target": "name=loginUser",
+      "targets": [
+        ["name=loginUser", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='loginUser']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "90ee3a70-a5d7-4db0-b1e7-1bfa843b4e5a",
+      "comment": "",
+      "command": "type",
+      "target": "name=loginUser",
+      "targets": [
+        ["name=loginUser", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='loginUser']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "prueba"
+    }, {
+      "id": "09cce798-0e86-4d2d-b0b4-6dbf65c5f5b5",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "prueba"
+    }, {
+      "id": "45392385-9b86-4d68-acc2-45c59b2f43f1",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(5)",
+      "targets": [
+        ["css=button:nth-child(5)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Acceder como Usuario')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "537205a0-17dc-4b88-a3eb-2b40275beb78",
+    "name": "Usuario - 2 ingresar dinero",
+    "commands": [{
+      "id": "260b5420-0302-47c9-b245-9e5f1b3ac18a",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/dwes/tarea2/Hidalgo_Arriaga_Ubaldo_DWES02_Tarea/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9d881ddf-9869-429a-9fcd-2082ae6832a5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x999",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f3ebc29d-b338-44fb-840e-9c20cb41e9ec",
+      "comment": "",
+      "command": "click",
+      "target": "name=loginUser",
+      "targets": [
+        ["name=loginUser", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='loginUser']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "79b48707-8166-46a1-a376-f9331ae3d84e",
+      "comment": "",
+      "command": "type",
+      "target": "name=loginUser",
+      "targets": [
+        ["name=loginUser", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='loginUser']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "prueba"
+    }, {
+      "id": "e1d93c34-1e38-4cf4-8609-3bc144d0bb54",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "prueba"
+    }, {
+      "id": "73bc206b-57f4-48b1-ae3d-dfcc9a5b2b1b",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(5)",
+      "targets": [
+        ["css=button:nth-child(5)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Acceder como Usuario')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "96e0097a-96ad-4cb4-8af7-7703cd2767a5",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(2)",
+      "targets": [
+        ["css=button:nth-child(2)", "css:finder"],
+        ["xpath=(//button[@type='submit'])[7]", "xpath:attributes"],
+        ["xpath=//button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3cdf903d-1d67-4b42-904f-594063ff6741",
+      "comment": "",
+      "command": "click",
+      "target": "name=fechaMov",
+      "targets": [
+        ["name=fechaMov", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='fechaMov']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "582825d9-379b-4602-b179-b3e64f5d90a7",
+      "comment": "",
+      "command": "type",
+      "target": "name=fechaMov",
+      "targets": [
+        ["name=fechaMov", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='fechaMov']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "2020-01-16"
+    }, {
+      "id": "b30a88ae-2053-473b-b77e-ff51d4d0b6f8",
+      "comment": "",
+      "command": "click",
+      "target": "name=cantidad",
+      "targets": [
+        ["name=cantidad", "name"],
+        ["css=input:nth-child(6)", "css:finder"],
+        ["xpath=//input[@name='cantidad']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "35aff973-ef23-416a-a74b-1316bc189861",
+      "comment": "",
+      "command": "type",
+      "target": "name=cantidad",
+      "targets": [
+        ["name=cantidad", "name"],
+        ["css=input:nth-child(6)", "css:finder"],
+        ["xpath=//input[@name='cantidad']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "45"
+    }, {
+      "id": "3d390a93-ced8-4e1f-94ad-b8a0ba61b217",
+      "comment": "",
+      "command": "click",
+      "target": "name=concepto",
+      "targets": [
+        ["name=concepto", "name"],
+        ["css=textarea", "css:finder"],
+        ["xpath=//textarea[@name='concepto']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "63418c33-17c1-488e-9dee-103655c1d6c2",
+      "comment": "",
+      "command": "type",
+      "target": "name=concepto",
+      "targets": [
+        ["name=concepto", "name"],
+        ["css=textarea", "css:finder"],
+        ["xpath=//textarea[@name='concepto']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "prueba de ingreso"
+    }, {
+      "id": "7636367a-648b-4492-9ce1-7589ab3453ee",
+      "comment": "",
+      "command": "click",
+      "target": "name=ingreso",
+      "targets": [
+        ["name=ingreso", "name"],
+        ["css=.container > button", "css:finder"],
+        ["xpath=//button[@name='ingreso']", "xpath:attributes"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ingresar dinero')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "74fc7f06-24cc-4bca-a75a-d4f5c0722219",
+    "name": "Usuario - 3 gastar",
+    "commands": [{
+      "id": "5f3ae525-287d-47b5-b791-8b7855b4657d",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/dwes/tarea2/Hidalgo_Arriaga_Ubaldo_DWES02_Tarea/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ef79dfd8-4d0a-4cfa-bea6-592b42525664",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x999",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "291573a4-4db4-4aaa-8312-0b38685d9ff6",
+      "comment": "",
+      "command": "click",
+      "target": "name=loginUser",
+      "targets": [
+        ["name=loginUser", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='loginUser']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "40d48d1c-fc1b-4fbd-8f89-27e5f3a8c1a4",
+      "comment": "",
+      "command": "type",
+      "target": "name=loginUser",
+      "targets": [
+        ["name=loginUser", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='loginUser']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "prueba"
+    }, {
+      "id": "57264d2c-2a4b-42c0-86f0-917671110e39",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "prueba"
+    }, {
+      "id": "af89e0a9-db11-41bb-a996-722180e87292",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "9282a0b1-4b93-450a-a4e3-a3e0a8f3e4e5",
+      "comment": "",
+      "command": "click",
+      "target": "css=body",
+      "targets": [
+        ["css=body", "css:finder"],
+        ["xpath=//body", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d53c0f73-e88e-48eb-a46f-e915ed85d2bd",
+      "comment": "",
+      "command": "click",
+      "target": "name=fechaMov",
+      "targets": [
+        ["name=fechaMov", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='fechaMov']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6f122419-5dbf-4fc9-8946-6f70bf79e843",
+      "comment": "",
+      "command": "type",
+      "target": "name=fechaMov",
+      "targets": [
+        ["name=fechaMov", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='fechaMov']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "2020-01-08"
+    }, {
+      "id": "5ecf525d-1c2e-416d-84ad-e69fa3a89b4a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.container:nth-child(3)",
+      "targets": [
+        ["css=.container:nth-child(3)", "css:finder"],
+        ["xpath=//div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a7514e8f-160d-4eb3-a328-fbd9e7aad0b8",
+      "comment": "",
+      "command": "click",
+      "target": "name=cantidad",
+      "targets": [
+        ["name=cantidad", "name"],
+        ["css=.container:nth-child(3) > input", "css:finder"],
+        ["xpath=//input[@name='cantidad']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3bc95c7f-bed7-44e0-966e-a3e25e55e473",
+      "comment": "",
+      "command": "type",
+      "target": "name=cantidad",
+      "targets": [
+        ["name=cantidad", "name"],
+        ["css=.container:nth-child(3) > input", "css:finder"],
+        ["xpath=//input[@name='cantidad']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "45"
+    }, {
+      "id": "4c7bba6f-6ce7-49bf-a9a1-aee1c02b7c1c",
+      "comment": "",
+      "command": "type",
+      "target": "name=concepto",
+      "targets": [
+        ["name=concepto", "name"],
+        ["css=textarea", "css:finder"],
+        ["xpath=//textarea[@name='concepto']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "gasto primero\\n"
+    }, {
+      "id": "7a9235c7-f881-49ff-8936-5b4c1ebab44b",
+      "comment": "",
+      "command": "click",
+      "target": "name=gastar",
+      "targets": [
+        ["name=gastar", "name"],
+        ["css=.container > button", "css:finder"],
+        ["xpath=//button[@name='gastar']", "xpath:attributes"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Realizar Gasto')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1fa06f04-6067-4e88-a8c1-b088e0e443ab",
+      "comment": "",
+      "command": "click",
+      "target": "css=.navbarChild:nth-child(4) > button",
+      "targets": [
+        ["css=.navbarChild:nth-child(4) > button", "css:finder"],
+        ["xpath=(//button[@type='submit'])[4]", "xpath:attributes"],
+        ["xpath=//li[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Gastos')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "57826aa7-0d2c-4e52-a8d9-c520c9f59ebf",
+      "comment": "",
+      "command": "click",
+      "target": "name=cantidad",
+      "targets": [
+        ["name=cantidad", "name"],
+        ["css=.container:nth-child(3) > input", "css:finder"],
+        ["xpath=//input[@name='cantidad']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c532240-b4d4-4a60-a6d3-9c31d56bed50",
+      "comment": "",
+      "command": "type",
+      "target": "name=cantidad",
+      "targets": [
+        ["name=cantidad", "name"],
+        ["css=.container:nth-child(3) > input", "css:finder"],
+        ["xpath=//input[@name='cantidad']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "9000"
+    }, {
+      "id": "56bcd49f-f8e1-4679-acd3-f4c9eb1d954c",
+      "comment": "",
+      "command": "click",
+      "target": "name=fechaMov",
+      "targets": [
+        ["name=fechaMov", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='fechaMov']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fcbb3e04-ecbd-48b4-a2e6-6025a325d870",
+      "comment": "",
+      "command": "type",
+      "target": "name=fechaMov",
+      "targets": [
+        ["name=fechaMov", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='fechaMov']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "2020-01-15"
+    }, {
+      "id": "2f50ff47-9f10-46c3-a2ed-984e287980de",
+      "comment": "",
+      "command": "click",
+      "target": "name=concepto",
+      "targets": [
+        ["name=concepto", "name"],
+        ["css=textarea", "css:finder"],
+        ["xpath=//textarea[@name='concepto']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ebfa7198-7649-4f16-8bcd-d2dd8c1cc2dc",
+      "comment": "",
+      "command": "click",
+      "target": "name=concepto",
+      "targets": [
+        ["name=concepto", "name"],
+        ["css=textarea", "css:finder"],
+        ["xpath=//textarea[@name='concepto']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "673d700b-81a4-425f-a3ae-8bdc6b20da89",
+      "comment": "",
+      "command": "click",
+      "target": "name=concepto",
+      "targets": [
+        ["name=concepto", "name"],
+        ["css=textarea", "css:finder"],
+        ["xpath=//textarea[@name='concepto']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a6a72c2f-3ff3-4cd3-b015-d09687dea13e",
+      "comment": "",
+      "command": "type",
+      "target": "name=concepto",
+      "targets": [
+        ["name=concepto", "name"],
+        ["css=textarea", "css:finder"],
+        ["xpath=//textarea[@name='concepto']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "superar presupuesto"
+    }, {
+      "id": "23cf6c71-fcc9-4510-9df5-4d02b52f38b4",
+      "comment": "",
+      "command": "click",
+      "target": "name=gastar",
+      "targets": [
+        ["name=gastar", "name"],
+        ["css=.container > button", "css:finder"],
+        ["xpath=//button[@name='gastar']", "xpath:attributes"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Realizar Gasto')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5291c8f5-d673-4cf3-afa7-03b65628ff6f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.navbarChild:nth-child(3) > button",
+      "targets": [
+        ["css=.navbarChild:nth-child(3) > button", "css:finder"],
+        ["xpath=(//button[@type='submit'])[3]", "xpath:attributes"],
+        ["xpath=//li[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ingresos')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c3819c7-b6fd-4e9b-8c80-4e6e67c33ea1",
+      "comment": "",
+      "command": "click",
+      "target": "name=fechaMov",
+      "targets": [
+        ["name=fechaMov", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='fechaMov']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "efffe9b3-8e95-42de-827b-3b16fd1287f3",
+      "comment": "",
+      "command": "type",
+      "target": "name=fechaMov",
+      "targets": [
+        ["name=fechaMov", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='fechaMov']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "2020-01-21"
+    }, {
+      "id": "7fe85b60-a6d1-4a2c-9f0d-a3dc8960dc97",
+      "comment": "",
+      "command": "click",
+      "target": "name=cantidad",
+      "targets": [
+        ["name=cantidad", "name"],
+        ["css=input:nth-child(6)", "css:finder"],
+        ["xpath=//input[@name='cantidad']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2fedec64-1476-457c-92b5-dc739f09fb48",
+      "comment": "",
+      "command": "type",
+      "target": "name=cantidad",
+      "targets": [
+        ["name=cantidad", "name"],
+        ["css=input:nth-child(6)", "css:finder"],
+        ["xpath=//input[@name='cantidad']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "10000"
+    }, {
+      "id": "7174b954-0039-4247-9782-0797b0acf0d0",
+      "comment": "",
+      "command": "click",
+      "target": "name=concepto",
+      "targets": [
+        ["name=concepto", "name"],
+        ["css=textarea", "css:finder"],
+        ["xpath=//textarea[@name='concepto']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "25849e2a-cb3c-4ae4-a43d-d006aaf2b4f5",
+      "comment": "",
+      "command": "type",
+      "target": "name=concepto",
+      "targets": [
+        ["name=concepto", "name"],
+        ["css=textarea", "css:finder"],
+        ["xpath=//textarea[@name='concepto']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "reajuste"
+    }, {
+      "id": "17fbb273-5a08-4091-b1c6-74fc14e644c5",
+      "comment": "",
+      "command": "click",
+      "target": "name=ingreso",
+      "targets": [
+        ["name=ingreso", "name"],
+        ["css=.container > button", "css:finder"],
+        ["xpath=//button[@name='ingreso']", "xpath:attributes"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ingresar dinero')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d9659de1-255e-47d0-9249-2ebba3f2afb9",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(3)",
+      "targets": [
+        ["css=button:nth-child(3)", "css:finder"],
+        ["xpath=(//button[@type='submit'])[8]", "xpath:attributes"],
+        ["xpath=//button[3]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "28c4e4fa-eca2-4d3d-a6c2-d6f61b8b5a47",
+    "name": "Usuario - 4 eliminar movimiento",
+    "commands": [{
+      "id": "fd9090b9-f039-44b4-a887-1ac138e17f15",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/dwes/tarea2/Hidalgo_Arriaga_Ubaldo_DWES02_Tarea/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1e038fb0-e4c3-40a1-a32b-e893f8cd1de2",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x999",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "810fd73e-f383-4646-af01-82cd8fbf240f",
+      "comment": "",
+      "command": "click",
+      "target": "name=loginUser",
+      "targets": [
+        ["name=loginUser", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='loginUser']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d5a08511-b8a8-451d-ab15-0eb57e86abe5",
+      "comment": "",
+      "command": "type",
+      "target": "name=loginUser",
+      "targets": [
+        ["name=loginUser", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='loginUser']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "prueba"
+    }, {
+      "id": "32edee44-89a8-4f10-aab1-550fc3f0b4c8",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "prueba"
+    }, {
+      "id": "74098bd4-271c-442a-9623-cc71ca10db09",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "fb8c6954-34a8-41e0-835f-880bb7a9310e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.navbarChild:nth-child(5) > button",
+      "targets": [
+        ["css=.navbarChild:nth-child(5) > button", "css:finder"],
+        ["xpath=(//button[@type='submit'])[5]", "xpath:attributes"],
+        ["xpath=//li[5]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Eliminar movimientos')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fee0a816-8e1e-4ef6-a735-a6a56806e8b7",
+      "comment": "",
+      "command": "click",
+      "target": "name=codigoMov[]",
+      "targets": [
+        ["name=codigoMov[]", "name"],
+        ["css=tr:nth-child(2) input", "css:finder"],
+        ["xpath=//input[@name='codigoMov[]']", "xpath:attributes"],
+        ["xpath=//td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6b5f42e3-3f2c-4866-8ba0-ed58a93bf687",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(4) input",
+      "targets": [
+        ["css=tr:nth-child(4) input", "css:finder"],
+        ["xpath=(//input[@name='codigoMov[]'])[3]", "xpath:attributes"],
+        ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8ebb9e88-fd0d-447a-a249-68e5d9ba4714",
+      "comment": "",
+      "command": "click",
+      "target": "name=eliminar",
+      "targets": [
+        ["name=eliminar", "name"],
+        ["css=.container > button", "css:finder"],
+        ["xpath=//button[@name='eliminar']", "xpath:attributes"],
+        ["xpath=//div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fa841fb7-5ff9-4b0b-8214-47a726bda4a4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.navbarChild:nth-child(2) > button",
+      "targets": [
+        ["css=.navbarChild:nth-child(2) > button", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//li[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ultimos movimientos')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "bc931f73-8ff4-46c1-a497-17e0d105ddb6",
+    "name": "Usuario - 5 ultimos movimeintos",
+    "commands": []
+  }],
+  "suites": [{
+    "id": "1fdc8e77-f45b-4029-ae67-ad459ebef823",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["f7a121c1-e8ee-4c23-bc6f-f2322d8f55a2"]
+  }],
+  "urls": ["http://localhost/", "http://localhost/dwes/tarea2/Hidalgo_Arriaga_Ubaldo_DWES02_Tarea/"],
+  "plugins": []
+}

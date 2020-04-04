@@ -121,6 +121,7 @@ function nuevoMov($codigo, $loginUser, $fecha, $cantidad, $concepto){
         $consulta->bindParam(':concepto', $concepto);
         $consulta->bindParam(':cantidad', $cantidad);
         $consulta->execute();
+        echo "<div class='navbarOk'><p>Movimiento creado correctamente.</p></div>";
 	} catch (PDOException $e) {
 
 		return $e->getCode().": ".$e->getMessage();
@@ -160,23 +161,23 @@ function ultimosMovs(){
         $consulta = $connection->prepare("SELECT * FROM movimientos WHERE loginUsu=? ORDER BY `movimientos`.`fecha` DESC LIMIT 10");
         $consulta->bindParam(1, $login);
         $consulta->execute();
-        if ($consulta->fetch()) {
+        $movimiento = $consulta->fetch();
+        if ($movimiento) {
             $tabla.='<table><tr><th>Fecha del movimiento</th><th>Concepto</th><th>Cantidad</th></tr>';
-       
-        while ($movimiento = $consulta->fetch()){
-        $tabla.= '<tr>';
-        $tabla.= '<td>'.$movimiento[2].'</td>';
-        $tabla.= '<td>'.$movimiento[3].'</td>';
-        $tabla.= '<td>'.$movimiento[4].'</td>';
-        $tabla.= '</tr>';
+            do{
+            $tabla.= '<tr>';
+            $tabla.= '<td>'.$movimiento[2].'</td>';
+            $tabla.= '<td>'.$movimiento[3].'</td>';
+            $tabla.= '<td>'.$movimiento[4].'</td>';
+            $tabla.= '</tr>';
+            } while ($movimiento = $consulta->fetch());
+            $tabla.='</table>';
+        }else{
+            $tabla.= '    <div class="container">
+            No hay movimientos que mostrar
+        </div>';
         }
-        $tabla.='</table>';
-    }else{
-        $tabla.= '    <div class="container">
-        No hay movimientos que mostrar
-    </div>';
-    }
-    echo $tabla;
+        echo $tabla;
     } catch (PDOException $e) {
         return $e->getCode().": ".$e->getMessage();
     }
@@ -200,24 +201,24 @@ function elementosEliminar(){
         $consulta = $connection->prepare("SELECT * FROM movimientos WHERE loginUsu=? ORDER BY `movimientos`.`fecha` DESC LIMIT 10");
         $consulta->bindParam(1, $login);
         $consulta->execute();
-        if ($consulta->fetch()) {
+        $movimiento = $consulta->fetch();
+        if ($movimiento) {
             $tabla.='<table><tr><th></th><th>Fecha del movimiento</th><th>Concepto</th><th>Cantidad</th></tr>';
-       $i = 0;
-        while ($movimiento = $consulta->fetch()){
-        $tabla.= '<tr>';
-        $tabla.= '<td><input type="checkbox" name="codigoMov[]" value="'.$movimiento[0].'"/></td>';       
-        $tabla.= '<td>'.$movimiento[2].'</td>';
-        $tabla.= '<td>'.$movimiento[3].'</td>';
-        $tabla.= '<td>'.$movimiento[4].'</td>';
-        $tabla.= '</tr>';
+            do{
+            $tabla.= '<tr>';
+            $tabla.= '<td><input type="checkbox" name="codigoMov[]" value="'.$movimiento[0].'"/></td>';       
+            $tabla.= '<td>'.$movimiento[2].'</td>';
+            $tabla.= '<td>'.$movimiento[3].'</td>';
+            $tabla.= '<td>'.$movimiento[4].'</td>';
+            $tabla.= '</tr>';
+            }while($movimiento = $consulta->fetch());
+            $tabla.='</table>';
+        }else{
+            $tabla.= '<div class="container">
+            No hay movimientos que mostrar
+        </div>';
         }
-        $tabla.='</table>';
-    }else{
-        $tabla.= '<div class="container">
-        No hay movimientos que mostrar
-    </div>';
-    }
-    echo $tabla;
+        echo $tabla;
     } catch (PDOException $e) {
         return $e->getCode().": ".$e->getMessage();
     }
@@ -232,7 +233,7 @@ function destruyeMovimiento($idMov){
         $consulta->bindParam(':login', $login);
         $consulta->bindParam(':codigo', $idMov);
         $consulta->execute();
-
+        echo "<div class='navbarOk'><p>Movimiento eliminado correctamente.</p></div>";
     } catch (PDOException $e) {
         return $e->getCode().": ".$e->getMessage();
     }
@@ -474,6 +475,7 @@ function nuevoUser(){
                 $consulta->bindParam(':fNacimiento', $fNacimiento);
                 $consulta->bindParam(':presupuesto', $presupuesto);
                 $consulta->execute();
+                echo "<div class='navbarOk'><p>Usuario creado correctamente.</p></div>";
             } catch (PDOException $e) {
 
                 return $e->getCode().": ".$e->getMessage();
@@ -587,6 +589,78 @@ function checkPassword(){
     return false;
 }
 
+
+
+function dataUpdateUser(){
+    $connection=conexionBBDD();
+
+    if ((isset($_POST["search"]) && isset($_POST['searchLogin']) && !empty($_POST["searchLogin"]))
+    || (isset($_POST["guardar"])) ){
+
+            $login = $_POST['searchLogin'];
+
+            try {
+
+                $consulta = $connection->prepare('SELECT * FROM usuarios WHERE login=?' );
+                $consulta->bindParam(1, $login);
+                $consulta->execute();
+                $usuario = $consulta->fetch();
+                if(is_array($usuario) ){
+                    return $usuario;
+                }else{
+                    return "<div class='navbarError'><p>Error. Usuario inexistente.</p></div>";
+                }
+            } catch (PDOException $e) {
+                return $e->getCode().": ".$e->getMessage();
+            }
+    }
+}
+
+function updateUser(){
+    $connection=conexionBBDD();
+    $data = array();
+    if (isset($_POST['guardar']) ){
+        $usuario = dataUpdateUser();
+        if($usuario['nombre']!=$_POST['name']){
+            $data['nombre'] = $_POST['name'];
+        }else{
+            $data['nombre'] = $usuario['nombre'];
+        }
+
+        if($usuario['fNacimiento']!=$_POST['fechaNacimiento']){
+            $data['fecha'] = $_POST['fechaNacimiento'];
+        }else{
+            $data['fecha'] = $usuario['fNacimiento'];
+        }
+        if($usuario['presupuesto']!=$_POST['presupuesto']){
+            $data['presupuesto'] = $_POST['presupuesto'];
+        }else{
+            $data['presupuesto'] = $usuario['presupuesto'];
+        }
+        if((isset($_POST['pass']) && !empty($_POST['pass']))
+            && (isset($_POST['checkPass']) && !empty($_POST['checkPass']))
+            && checkPassword()){
+            $data['pass'] = $_POST['pass'];
+        }else{
+            $data['pass'] = $usuario['password'];
+        }
+            try {
+                $consulta = $connection->prepare('UPDATE usuarios SET nombre = :name, password=:pass, fNacimiento=:fecha, presupuesto=:presupuesto WHERE login = :login' );
+                $consulta->bindParam(':login', $_POST['loginUser']);
+                $consulta->bindParam(':name', $data['nombre']);
+                $consulta->bindParam(':pass', $data['pass']);
+                $consulta->bindParam(':fecha', $data['fecha']);
+                $consulta->bindParam(':presupuesto', $data['presupuesto']);
+                $consulta->execute();
+                echo "<div class='navbarOk'><p>Usuario actualizado correctamente.</p></div>";
+            } catch (PDOException $e) {
+                return $e->getCode().": ".$e->getMessage();
+            }
+
+    }
+}
+
+
 /**
  * Sentencias para base de datos
  * INSERT INTO `usuarios` (`login`, `password`, `nombre`, `fNacimiento`, `presupuesto`) VALUES ('test01', 'test01', 'Test01', '2020-01-15', '6000');
@@ -601,3 +675,204 @@ function checkPassword(){
  * 
  */
 
+function eliminarUsuarios(){
+    if ( isset($_POST['eliminar'])) {
+            destruyeUsuario($_POST['usuario'] ); 
+    }   
+}
+function usuariosEliminar(){
+
+    $connection=conexionBBDD();
+    $login = $_POST['searchLogin'];
+    $tabla ="";
+    
+    try {
+        $consulta = $connection->prepare("SELECT * FROM usuarios WHERE login=?");
+        $consulta->bindParam(1, $login);
+        $consulta->execute();
+        $usuario = $consulta->fetch(PDO::FETCH_ASSOC);
+        if ($usuario) {
+            $tabla.='<table><tr><th></th><th>Login de usuario</th><th>Nombre de usuario</th><th>Fecha Nacimiento</th><th>Presupuesto</th></tr>';
+            $tabla.= '<tr>';
+            $tabla.= '<td><input type="checkbox" name="usuario" value="'.$usuario['login'].'"/></td>';       
+            $tabla.= '<td>'.$usuario['login'].'</td>';
+            $tabla.= '<td>'.$usuario['nombre'].'</td>';
+            $tabla.= '<td>'.$usuario['fNacimiento'].'</td>';
+            $tabla.= '<td>'.$usuario['presupuesto'].'</td>';
+            $tabla.= '</tr>';
+  
+            $tabla.='</table>';
+        }else{
+            $tabla.= '<div class="container">
+            No hay usuarios que mostrar
+        </div>';
+        }
+        echo $tabla;
+    } catch (PDOException $e) {
+        return $e->getCode().": ".$e->getMessage();
+    }
+}
+
+function destruyeUsuario($user){
+    $connection=conexionBBDD();
+    $login = $_POST['usuario'];
+    
+    try {
+        $consulta = $connection->prepare("DELETE FROM movimientos WHERE loginUsu= :login");
+        $consulta->bindParam(':login', $login);
+        $consulta->execute();
+
+    } catch (PDOException $e) {
+        return $e->getCode().": ".$e->getMessage();
+    }
+
+    try {
+        $consulta = $connection->prepare("DELETE FROM usuarios WHERE login= :login");
+        $consulta->bindParam(':login', $login);
+        $consulta->execute();
+        echo "<div class='navbarOk'><p>Usuario eliminado correctamente.</p></div>";
+    } catch (PDOException $e) {
+        return $e->getCode().": ".$e->getMessage();
+    }
+}
+
+
+
+/**
+ * Autoevaluaciones
+ */
+function autoevaluacion()
+{
+
+    $archivo = fopen("./resources/Hidalgo_Arriaga_Ubaldo_DWES02_Auto-evaluacion.csv", "r");
+
+    $table = "<thead><tr><th>Item</th><th>Nota Maxima</th><th>Nota Alumno</th><th>Nota Profesor</th><th>Observaciones</th></tr></thead>";
+
+    /*     if (isset($_GET['send'])) {
+        $result = autoevUser($archivo, $table);
+    } else { */
+    $result = lineToLine($archivo, $table);
+    /*   }/*  */
+
+
+    fclose($archivo);
+    return  $result;
+}
+
+function lineToLine($archivo, $table)
+{
+    $notaAlumno = 0;
+    $notaProfesor = 0;
+    $itemNum = 1;
+
+
+    while (($linea = fgets($archivo)) !== false) {
+
+        $datos = explode(";", $linea);
+
+        $item = $datos[0];
+        $notaMax = $datos[1];
+
+        $alumno = str_replace(",", ".", $datos[2]);
+        $profesor = str_replace(",", ".", $datos[3]);
+        $observaciones = $datos[4];
+
+        //cargamos valores en la tabla
+
+    
+        $elementAlum = "itemAlum" . $itemNum;
+        $elementProf = "itemProf" . $itemNum;
+        $elementObs = "obs" . $itemNum;
+        $elementDescrip = "descrip" . $itemNum;
+        if (isset($_GET[$elementDescrip])) {
+            if ($_GET[$elementDescrip] === "menos") {
+                $table .= "<tr><td>" . verMas($item, 20) . "<br/><button name='".$elementDescrip."' value='mas'>VER MÁS</button></td>";
+            }else if($_GET[$elementDescrip] ==="mas"){
+                $table .= "<tr><td>" . verMas($item, strlen($item)) . "<br/><button name='".$elementDescrip."' value='menos'>VER MENOS</button></td>";
+            }
+        } else {
+            $table .= "<tr><td>" . verMas($item, 20) . "<br/><button name='".$elementDescrip."' value='mas'>VER MÁS</button></td>";
+
+        }
+        
+        $table .= "<td style='text-align:center'>" . $notaMax . "</td>";
+        if (isset($_GET[$elementAlum])) {
+
+            if ($itemNum == "14") {
+                $table .= "<td><input type='number' name='itemAlum" . $itemNum . "' value='" . $_GET[$elementAlum] . "' min='-10' max='0' step='0.2' ></input></td>";
+            } else {
+                $table .= "<td><input type='number' name='itemAlum" . $itemNum . "' value='" . $_GET[$elementAlum] . "' min='0'  max='" . str_replace(",", ".", $notaMax) . "' step='0.05' ></input></td>";
+            }
+            $notaAlumno += floatval($_GET[$elementAlum]);
+        } else {
+            if ($itemNum == "14") {
+                $table .= "<td><input type='number' name='itemAlum" . $itemNum . "' value='" . $alumno . "' min='-10'  max='0' step='0.2' ></input></td>";
+            } else {
+                $table .= "<td><input type='number' name='itemAlum" . $itemNum . "' value='" . $alumno . "' min='0'  max='" . str_replace(",", ".", $notaMax) . "' step='0.05' ></input></td>";
+
+            }
+
+            $notaAlumno += floatval($alumno);
+        }
+        if (isset($_GET[$elementProf])) {
+
+            if ($itemNum === "15") {
+                $table .= "<td><input type='number' name='itemProf" . $itemNum . "'value='" . $_GET[$elementProf] . "' min='-10'  max='0' step='0.2' ></input></td>";
+            } else {
+                $table .= "<td><input type='number' name='itemProf" . $itemNum . "'value='" . $_GET[$elementProf] . "' min='0'  max='" . str_replace(",", ".", $notaMax) . "' step='0.05' ></input></td>";
+            }
+
+            $notaProfesor += floatval($_GET[$elementProf]);
+        } else {
+
+            if ($itemNum === "14") {
+                $table .= "<td><input type='number' name='itemProf" . $itemNum . "'value='" . $profesor . "' min='-10'  max='0' step='0.2' ></input></td>";
+            } else {
+                $table .= "<td><input type='number' name='itemProf" . $itemNum . "'value='" . $profesor . "' min='0'  max='" . str_replace(",", ".", $notaMax) . "' step='0.05' ></input></td>";
+            }
+            $notaProfesor += floatval($profesor);
+        }
+        if (isset($_GET[$elementObs])) {
+            $table .= "<td><textarea name='obs" . $itemNum . "' rows='4' cols='50'>" . $_GET[$elementObs] . "</textarea></td></tr>";
+        } else {
+            $table .= "<td><textarea name='obs" . $itemNum . "' rows='4' cols='50'>" . $observaciones . "</textarea></td></tr>";
+        }
+
+        $itemNum++;
+    }
+
+
+    return notasTotales($table, $notaAlumno, $notaProfesor);
+}
+
+function notasTotales($table, $notaAlumno, $notaProfesor)
+{
+    $item = "Total";
+    $notaMax = 10;
+    $alumno = str_replace(",", ".", $notaAlumno);
+    $profesor = str_replace(",", ".", $notaProfesor);
+
+
+    $table .= "<tr><td>" . $item . "</td>";
+    $table .= "<td style='text-align:center'>" . $notaMax . "</td>";
+    $table .= "<td><input type='number' name='alumnoTotal' value='" . $alumno . "' min='0'  max='" . str_replace(",", ".", $notaMax) . "' step='0.05' ></input></td>";
+    $table .= "<td><input type='number' name='profesorTotal' value='" . $profesor . "' min='0'  max='" . str_replace(",", ".", $notaMax) . "' step='0.05' ></input></td>";
+    $table .= "<td style='background-color:grey;'></td></tr>";
+    return $table;
+}
+
+
+function verMas($texto, $cantidad)
+{
+    $verMas="";
+    $separadorTexto =str_split($texto);
+    if (count($separadorTexto) > $cantidad) {
+        for ($i = 0; $i < $cantidad; $i++) {
+            $verMas .= htmlspecialchars($separadorTexto[$i]) . "";
+        }
+        $verMas .= " ...";
+    } else {
+        $verMas = $texto;
+    }
+    return $verMas;
+}

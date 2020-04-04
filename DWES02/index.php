@@ -28,6 +28,11 @@ login();
     <button type="submit" formaction="./admin/acceso.php">Acceder como Administrador</button>
   </div>
 </form>
+<form>
+  <div class="container">        
+    <button type="submit" formaction="autoevaluacion.php">Ir a Autoevaluacion</button>
+  </div>
+</form>
 <?php
 require_once './includes/pie.php';
 ?>

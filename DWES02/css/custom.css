@@ -117,6 +117,14 @@ span.psw {
   background-color: red;
 }
 
+.navbarOk {
+  list-style-type: none;
+ 
+  overflow: hidden;
+  color: white;
+  background-color: green;
+}
+
 .footer {
   position: fixed;
   left: 0;
