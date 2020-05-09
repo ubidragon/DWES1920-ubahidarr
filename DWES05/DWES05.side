@@ -1,0 +1,481 @@
+{
+  "id": "3d7bfb57-0366-45c0-9931-151a5f08e096",
+  "version": "2.0",
+  "name": "DWES05",
+  "url": "http://localhost",
+  "tests": [{
+    "id": "a82e27ed-8b10-423b-a874-eb755e870bf2",
+    "name": "Cliente con WSDL",
+    "commands": [{
+      "id": "26f9489f-4747-4b1e-b5ad-f855feb08f31",
+      "comment": "",
+      "command": "open",
+      "target": "/dwes/tarea5/Hidago_Arriaga_Ubaldo_DWES05_Tarea_Ex/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8ff97e3d-2945-4116-85a5-01c9b6ca7b32",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1265x997",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3d1b733a-d3a7-49fc-a76b-aaa7f6d36ea3",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=generadorWSDL.php",
+      "targets": [
+        ["linkText=generadorWSDL.php", "linkText"],
+        ["css=tr:nth-child(10) a", "css:finder"],
+        ["xpath=//a[contains(text(),'generadorWSDL.php')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'generadorWSDL.php')]", "xpath:href"],
+        ["xpath=//tr[10]/td[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'generadorWSDL.php')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "86cea6b8-25b3-4242-a180-73ccf7b2fd05",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["name=login", "name"],
+        ["css=#login", "css:finder"],
+        ["xpath=//input[@id='login']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cfd2eb2c-b3b7-4c41-a2b6-5c36b71996c6",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["name=login", "name"],
+        ["css=#login", "css:finder"],
+        ["xpath=//input[@id='login']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "20a6e5d7-7074-4c99-b3de-78d12860b416",
+      "comment": "",
+      "command": "type",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["name=login", "name"],
+        ["css=#login", "css:finder"],
+        ["xpath=//input[@id='login']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "usu1"
+    }, {
+      "id": "6e01cce9-535f-4094-943b-e207c3136f4e",
+      "comment": "",
+      "command": "click",
+      "target": "id=buscarEmail",
+      "targets": [
+        ["id=buscarEmail", "id"],
+        ["name=buscarEmail", "name"],
+        ["css=#buscarEmail", "css:finder"],
+        ["xpath=//button[@id='buscarEmail']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b3083648-2c99-44b8-aff6-edd29d33154b",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["name=login", "name"],
+        ["css=#login", "css:finder"],
+        ["xpath=//input[@id='login']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "69870af8-67a0-4795-9c99-324abf5e13a3",
+      "comment": "",
+      "command": "type",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["name=login", "name"],
+        ["css=#login", "css:finder"],
+        ["xpath=//input[@id='login']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "usu3"
+    }, {
+      "id": "d8c12333-341c-43ba-99f3-a2b97a52fb66",
+      "comment": "",
+      "command": "click",
+      "target": "id=buscarEmail",
+      "targets": [
+        ["id=buscarEmail", "id"],
+        ["name=buscarEmail", "name"],
+        ["css=#buscarEmail", "css:finder"],
+        ["xpath=//button[@id='buscarEmail']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "644d4570-1f91-41d0-926a-04fcfee3aa5c",
+      "comment": "",
+      "command": "click",
+      "target": "id=fecha",
+      "targets": [
+        ["id=fecha", "id"],
+        ["name=fecha", "name"],
+        ["css=#fecha", "css:finder"],
+        ["xpath=//input[@id='fecha']", "xpath:attributes"],
+        ["xpath=//div[4]/form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "11d90c92-9550-47df-9e1d-8748011b0fe9",
+      "comment": "",
+      "command": "click",
+      "target": "id=fecha",
+      "targets": [
+        ["id=fecha", "id"],
+        ["name=fecha", "name"],
+        ["css=#fecha", "css:finder"],
+        ["xpath=//input[@id='fecha']", "xpath:attributes"],
+        ["xpath=//div[4]/form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8993605d-f001-4776-89df-84bffe70550c",
+      "comment": "",
+      "command": "type",
+      "target": "id=fecha",
+      "targets": [
+        ["id=fecha", "id"],
+        ["name=fecha", "name"],
+        ["css=#fecha", "css:finder"],
+        ["xpath=//input[@id='fecha']", "xpath:attributes"],
+        ["xpath=//div[4]/form/input", "xpath:position"]
+      ],
+      "value": "2020-05-31"
+    }, {
+      "id": "a2cda591-c6fe-4278-8587-02f163c2f9b0",
+      "comment": "",
+      "command": "click",
+      "target": "id=buscarFecha",
+      "targets": [
+        ["id=buscarFecha", "id"],
+        ["name=buscarFecha", "name"],
+        ["css=#buscarFecha", "css:finder"],
+        ["xpath=//button[@id='buscarFecha']", "xpath:attributes"],
+        ["xpath=//div[4]/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Buscar anuncios')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "78ba325e-1ee3-414a-b40f-cb68d0c58df1",
+      "comment": "",
+      "command": "click",
+      "target": "id=fecha",
+      "targets": [
+        ["id=fecha", "id"],
+        ["name=fecha", "name"],
+        ["css=#fecha", "css:finder"],
+        ["xpath=//input[@id='fecha']", "xpath:attributes"],
+        ["xpath=//div[4]/form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "56289889-6751-4521-aa12-dcade38e810d",
+      "comment": "",
+      "command": "type",
+      "target": "id=fecha",
+      "targets": [
+        ["id=fecha", "id"],
+        ["name=fecha", "name"],
+        ["css=#fecha", "css:finder"],
+        ["xpath=//input[@id='fecha']", "xpath:attributes"],
+        ["xpath=//div[4]/form/input", "xpath:position"]
+      ],
+      "value": "2019-12-13"
+    }, {
+      "id": "3cece381-de0d-437b-93f0-51ff06dc2108",
+      "comment": "",
+      "command": "click",
+      "target": "id=buscarFecha",
+      "targets": [
+        ["id=buscarFecha", "id"],
+        ["name=buscarFecha", "name"],
+        ["css=#buscarFecha", "css:finder"],
+        ["xpath=//button[@id='buscarFecha']", "xpath:attributes"],
+        ["xpath=//div[4]/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Buscar anuncios')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e1cdc77d-88ca-48fe-8b34-7c5096e5c8f3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.navbarChild:nth-child(5) > button",
+      "targets": [
+        ["css=.navbarChild:nth-child(5) > button", "css:finder"],
+        ["xpath=(//button[@type='submit'])[5]", "xpath:attributes"],
+        ["xpath=//li[5]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ir a clientew')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "e2de5573-b909-488e-9a38-b92fef9e7bfc",
+    "name": "Cliente sin WSDL",
+    "commands": [{
+      "id": "e7eac2ae-9dfb-434a-87fe-8c301f74b9fe",
+      "comment": "",
+      "command": "open",
+      "target": "/dwes/tarea5/Hidago_Arriaga_Ubaldo_DWES05_Tarea_Ex/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "60218c66-85d1-476b-8ff0-106df3eea498",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=cliente.php",
+      "targets": [
+        ["linkText=cliente.php", "linkText"],
+        ["css=tr:nth-child(5) a", "css:finder"],
+        ["xpath=//a[contains(text(),'cliente.php')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'cliente.php')]", "xpath:href"],
+        ["xpath=//tr[5]/td[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'cliente.php')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae54e93e-0749-4f9f-bd81-57d9ac590c2d",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["name=login", "name"],
+        ["css=#login", "css:finder"],
+        ["xpath=//input[@id='login']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e9fc1b6a-8b5f-4690-9c02-209cc1ee7517",
+      "comment": "",
+      "command": "type",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["name=login", "name"],
+        ["css=#login", "css:finder"],
+        ["xpath=//input[@id='login']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "usu1"
+    }, {
+      "id": "36459f13-2fdc-4551-be0e-237e9abae4be",
+      "comment": "",
+      "command": "click",
+      "target": "id=buscarEmail",
+      "targets": [
+        ["id=buscarEmail", "id"],
+        ["name=buscarEmail", "name"],
+        ["css=#buscarEmail", "css:finder"],
+        ["xpath=//button[@id='buscarEmail']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "af774569-bc07-4844-8a48-1eea49fc04f2",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["name=login", "name"],
+        ["css=#login", "css:finder"],
+        ["xpath=//input[@id='login']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2bc8605c-471d-4516-86e3-6e588cb9b273",
+      "comment": "",
+      "command": "type",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["name=login", "name"],
+        ["css=#login", "css:finder"],
+        ["xpath=//input[@id='login']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "usu3"
+    }, {
+      "id": "31df1dfd-f131-4bfe-9d48-8974c4d5f9c9",
+      "comment": "",
+      "command": "click",
+      "target": "id=buscarEmail",
+      "targets": [
+        ["id=buscarEmail", "id"],
+        ["name=buscarEmail", "name"],
+        ["css=#buscarEmail", "css:finder"],
+        ["xpath=//button[@id='buscarEmail']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dd6f36de-d6bf-4d9b-a18a-374030f455bc",
+      "comment": "",
+      "command": "click",
+      "target": "id=fecha",
+      "targets": [
+        ["id=fecha", "id"],
+        ["name=fecha", "name"],
+        ["css=#fecha", "css:finder"],
+        ["xpath=//input[@id='fecha']", "xpath:attributes"],
+        ["xpath=//div[4]/form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "21b03945-a6ae-41c0-9ec9-a42db070f977",
+      "comment": "",
+      "command": "click",
+      "target": "id=fecha",
+      "targets": [
+        ["id=fecha", "id"],
+        ["name=fecha", "name"],
+        ["css=#fecha", "css:finder"],
+        ["xpath=//input[@id='fecha']", "xpath:attributes"],
+        ["xpath=//div[4]/form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "579cc02b-4a8d-4e9a-9db8-36610469e193",
+      "comment": "",
+      "command": "type",
+      "target": "id=fecha",
+      "targets": [
+        ["id=fecha", "id"],
+        ["name=fecha", "name"],
+        ["css=#fecha", "css:finder"],
+        ["xpath=//input[@id='fecha']", "xpath:attributes"],
+        ["xpath=//div[4]/form/input", "xpath:position"]
+      ],
+      "value": "2020-04-29"
+    }, {
+      "id": "6c08f601-0122-4f2e-a208-cdb7ef85b726",
+      "comment": "",
+      "command": "click",
+      "target": "id=buscarFecha",
+      "targets": [
+        ["id=buscarFecha", "id"],
+        ["name=buscarFecha", "name"],
+        ["css=#buscarFecha", "css:finder"],
+        ["xpath=//button[@id='buscarFecha']", "xpath:attributes"],
+        ["xpath=//div[4]/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Buscar anuncios')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "58640705-cf33-4b40-b102-eae4fcb7c48a",
+      "comment": "",
+      "command": "click",
+      "target": "id=fecha",
+      "targets": [
+        ["id=fecha", "id"],
+        ["name=fecha", "name"],
+        ["css=#fecha", "css:finder"],
+        ["xpath=//input[@id='fecha']", "xpath:attributes"],
+        ["xpath=//div[4]/form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ba363a26-ef58-4220-814b-c3fcb054625c",
+      "comment": "",
+      "command": "type",
+      "target": "id=fecha",
+      "targets": [
+        ["id=fecha", "id"],
+        ["name=fecha", "name"],
+        ["css=#fecha", "css:finder"],
+        ["xpath=//input[@id='fecha']", "xpath:attributes"],
+        ["xpath=//div[4]/form/input", "xpath:position"]
+      ],
+      "value": "2020-11-14"
+    }, {
+      "id": "230afbb8-009d-4209-ba49-2962184a9e2f",
+      "comment": "",
+      "command": "click",
+      "target": "id=buscarFecha",
+      "targets": [
+        ["id=buscarFecha", "id"],
+        ["name=buscarFecha", "name"],
+        ["css=#buscarFecha", "css:finder"],
+        ["xpath=//button[@id='buscarFecha']", "xpath:attributes"],
+        ["xpath=//div[4]/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Buscar anuncios')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "98469607-f651-4370-95d7-45d4daaa3a2d",
+      "comment": "",
+      "command": "click",
+      "target": "id=fecha",
+      "targets": [
+        ["id=fecha", "id"],
+        ["name=fecha", "name"],
+        ["css=#fecha", "css:finder"],
+        ["xpath=//input[@id='fecha']", "xpath:attributes"],
+        ["xpath=//div[4]/form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d34b53f2-27f4-4c0c-97c1-35d9d7fe5fee",
+      "comment": "",
+      "command": "type",
+      "target": "id=fecha",
+      "targets": [
+        ["id=fecha", "id"],
+        ["name=fecha", "name"],
+        ["css=#fecha", "css:finder"],
+        ["xpath=//input[@id='fecha']", "xpath:attributes"],
+        ["xpath=//div[4]/form/input", "xpath:position"]
+      ],
+      "value": "2019-04-16"
+    }, {
+      "id": "0afc10a5-b87e-4891-84a7-6e1238abeec2",
+      "comment": "",
+      "command": "click",
+      "target": "id=buscarFecha",
+      "targets": [
+        ["id=buscarFecha", "id"],
+        ["name=buscarFecha", "name"],
+        ["css=#buscarFecha", "css:finder"],
+        ["xpath=//button[@id='buscarFecha']", "xpath:attributes"],
+        ["xpath=//div[4]/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Buscar anuncios')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "e3d223c7-bada-4e7f-91f4-c5496a817787",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["a82e27ed-8b10-423b-a874-eb755e870bf2"]
+  }],
+  "urls": ["http://localhost/"],
+  "plugins": []
+}
