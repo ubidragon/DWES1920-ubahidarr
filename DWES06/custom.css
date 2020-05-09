@@ -1,0 +1,170 @@
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password], input[type=number], input[type=date], textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+a{
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 18px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+.navbar {
+  list-style-type: none;
+ 
+  overflow: hidden;
+  background-color: #4CAF50;
+}
+
+.navbarChild {
+  float: left;
+}
+
+.navbarChild a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 0.55em;
+  text-decoration: none;
+}
+
+.navbarChild a:hover {
+  background-color: sandybrown;
+}
+
+.navbarChild button {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 0.5em;
+  text-decoration: none;
+}
+
+.navbarChild button:hover {
+  background-color: sandybrown;
+}
+
+.formNotBorder {
+  border: none;
+}
+
+.navbarError {
+  list-style-type: none;
+ 
+  overflow: hidden;
+  color: white;
+  background-color: red;
+}
+
+.navbarOk {
+  list-style-type: none;
+ 
+  overflow: hidden;
+  color: white;
+  background-color: green;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+}
+
+.footer p {
+text-align: center;
+}
+
+.boton {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.boton:hover {
+  opacity: 0.8;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
