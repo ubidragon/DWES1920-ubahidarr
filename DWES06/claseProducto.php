@@ -1,5 +1,5 @@
 <?php
-class Movimiento {
+class claseProducto {
 
     protected $codigo;
     protected $nombre;
@@ -41,5 +41,9 @@ class Movimiento {
     function getStock(){
         return $this->stock;
     }
+}
+
+
+
 
 ?>
