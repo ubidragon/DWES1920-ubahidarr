@@ -8,13 +8,14 @@ class DB {
         try {
             $connection = new PDO("mysql:host=localhost;port=3306;dbname=amazonia", 'root', '');
             $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $connection->exec("set names utf8");
         } catch (PDOException $e) {
             $error = $e->getCode().": ".$e->getMessage();
         }
         return $connection;
     }
 
-    public function datosTabla(){
+    public static function datosTabla(){
         $connection=self::conexion();
         global $response;
         try {
@@ -34,7 +35,7 @@ class DB {
     }
        
 
-    public function insertarProducto($articulo){
+    public static function insertarProducto($articulo){
         $connection=self::conexion();
        
         $cod = $articulo[0];
@@ -61,7 +62,7 @@ class DB {
         }
     }
 
-    public function editarProducto($articulo){
+    public static function editarProducto($articulo){
         $connection=self::conexion();
        
         $codigo = $articulo[0];
@@ -78,7 +79,7 @@ class DB {
         }
     }
 
-    public function eliminarProducto($articulo){
+    public static function eliminarProducto($articulo){
         $connection=self::conexion();
         $codigo = $articulo[0];
         try {
