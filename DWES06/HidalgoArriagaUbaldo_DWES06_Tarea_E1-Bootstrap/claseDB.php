@@ -92,25 +92,25 @@ class DB {
             return $e->getCode().": ".$e->getMessage();
         }
     }
-    // public function buscaPatron($patron){
-    //     $connection=self::conexion();    
-    //     try {
-    //         $consulta = $connection->prepare("SELECT * FROM producto where nombre LIKE ?");
-    //         $consulta->bindParam(1, $patron);
-    //         $consulta->execute();
-    //         $producto = $consulta->fetch();
-    //         if ($producto) {
+    public static function buscaPatron($patron){
+        $connection=self::conexion();    
+        try {
+            $consulta = $connection->prepare("SELECT * FROM producto where nombre LIKE ?");
+            $consulta->bindParam(1, $patron);
+            $consulta->execute();
+            $producto = $consulta->fetch();
+            if ($producto) {
             
-    //             do{
-    //                 $productos[] = array('nombre' =>$producto['nombre']);                
-    //             } while ($producto = $consulta->fetch());
-    //         }        
-    //         $buscar = array("buscar" => $productos);
-    //         $response["buscar"] = json_encode($productos)
-    //     } catch (PDOException $e) {
-    //         return $e->getCode().": ".$e->getMessage();
-    //     }
-    // }
+                do{
+                    $productos[] = array('nombre' =>$producto['nombre']);                
+                } while ($producto = $consulta->fetch());
+            }        
+            $buscar = array("buscar" => $productos);
+            $response["buscar"] = json_encode($productos);
+        } catch (PDOException $e) {
+            return $e->getCode().": ".$e->getMessage();
+        }
+    }
 }
     if (isset($_POST['accionProducto']) && $_POST['accionProducto']=="insertar"){
 
