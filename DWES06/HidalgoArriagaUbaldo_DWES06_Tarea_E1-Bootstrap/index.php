@@ -1,6 +1,3 @@
-<?php
-?>
-
 <!DOCTYPE html>
 <html>
 
@@ -95,8 +92,34 @@
             </div>
         </div>
     </div>
-            <br />
-            <div class="container">
+    <div class="modal fade" id="modalChangeLog" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">Changelog</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <p>Autor: Ubaldo Hidalgo Arriaga</p>
+                        <p>Ultima modificacion: 2 de Junio de 2020</p>
+                        <ul>
+                            <li>Incorportacion de Bootstrap 4</li>
+                            <li>Modificacion del Modal</li>
+                            <li>Implementacion de busqueda en vivo</li>
+                            <li>Incorportacion de Busqueda avanzada</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="d-flex justify-content-center bg-dark text-warning">
         <h1>Amazonia</h1>
     </div>
